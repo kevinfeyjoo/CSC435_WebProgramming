@@ -1,0 +1,7 @@
+body {
+  background-image: url("images/silverware.jpg");
+  background-repeat: repeat;
+}
+#duck3 {
+list-style-image: url('images/duck3.png')
+}
