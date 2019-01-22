@@ -34,3 +34,7 @@ li a {
 li a:hover {
   background-color: #111111;
 }
+#div1 {
+  background-color: black;
+  color: white
+}
