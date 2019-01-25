@@ -5,6 +5,9 @@ body {
   font-size: 11pt;
   font-family: georgia;
 }
+h2 {
+  letter-spacing: 0.02em;
+}
 #duck3 {
 list-style-image: url('images/duck3.png')
 }
