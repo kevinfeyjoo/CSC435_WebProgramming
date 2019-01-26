@@ -30,5 +30,7 @@ list-style-image: url('images/duck3.png')
   color: #A4A400;
 }
 #yellow {
-  background-color: yellow;
+  background-color: #f9f393;
+  position: relative;
+  left: 30px;
 }
