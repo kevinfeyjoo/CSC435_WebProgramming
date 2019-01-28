@@ -1,6 +1,7 @@
 body {
   background-image: url("images/silverware.jpg");
   background-repeat: repeat;
+  background-size: 100px;
   color: #404040;
   font-size: 11pt;
   font-family: georgia;
