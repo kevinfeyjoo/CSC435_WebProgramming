@@ -35,3 +35,6 @@ list-style-image: url('images/duck3.png')
   position: relative;
   left: 30px;
 }
+img {
+  border-radius: 10px;
+}
