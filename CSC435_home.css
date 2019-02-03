@@ -1,6 +1,6 @@
 body {
-  background-color: white;
-  margin: 0;
+  background-image: url("back2.jpg");
+  margin: 15px;
 }
 ul {
   list-style: none;
@@ -8,19 +8,23 @@ ul {
 * {
   box-sizing: border-box;
 }
-
-
+a{
+  color: white;
+}
 /* Style the header */
 .header {
-  background-color: white;
+  /*background-color: #333;*/
   padding: 20px;
   text-align: center;
+  color: white;
+  font-size: 60px;
 }
 
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  /*background-color: #333;*/
+  margin-bottom: 20px;
 }
 
 /* Style the topnav links */
@@ -41,7 +45,9 @@ ul {
 .column {
   float: left;
   width: 33.33%;
-  padding: 15px;
+  padding: 10px;
+  /*background-color: black;*/
+  color: white;
 }
 
 /* Clear floats after the columns */
