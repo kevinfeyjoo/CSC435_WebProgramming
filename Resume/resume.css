@@ -1,4 +1,7 @@
 body {
   background-image: url("back1.jpg");
-
+  text-align: center;
+}
+ul,ol {
+  list-style: none;
 }
