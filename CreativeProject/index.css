@@ -1,7 +1,16 @@
 h1 {
   font-size: 70px;
-  text-align: center;
+}
+h2{
+  text-align: right;
+}
+h3 {
+  text-align: left;
 }
 body {
   background-color: silver;
+  background-image: url("car.gif");
+  background-size: auto;
+  text-align: center;
+  color: white;
 }
