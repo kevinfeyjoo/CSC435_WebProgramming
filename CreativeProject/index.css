@@ -1,16 +1,37 @@
 h1 {
   font-size: 70px;
 }
-h2{
-  text-align: right;
-}
 h3 {
   text-align: left;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+}
+li.a{
+  float: right;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 body {
   background-color: silver;
   background-image: url("car.gif");
-  background-size: auto;
   text-align: center;
   color: white;
+}
+footer {
+  padding: 20px;
+  text-align: center;
+  margin-top: 700px;
 }
