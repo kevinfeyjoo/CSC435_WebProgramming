@@ -10,6 +10,7 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  opacity: .4;
 }
 li {
   float: left;
@@ -24,17 +25,60 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
+a {
+  text-decoration: none;
+  color: white;
+}
+li a:hover {
+  background-color: #555;
+  color: white;
+}
 body {
   background-color: silver;
   background-image: url("car.gif");
+  background-repeat: no-repeat;
   text-align: center;
   color: white;
+  padding: 5px
 }
 footer {
   padding: 20px;
   text-align: center;
-  margin-top: 700px;
+  margin-top: 800px;
+  background-color: #555;
+}
+footer.f {
+  margin-top: 100px;
 }
 p {
-  font-size: 60px;
+  font-size: 20px;
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  font-size: 20px;
+  background-color: #555;
+  padding: 15px;
+  margin: 15px;
+
+}
+#fontt {
+  font-size: 10px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+img.b {
+  float: center;
 }
