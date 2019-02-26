@@ -1,0 +1,3 @@
+funtion helloi(){
+  alert("Hi!")
+}
