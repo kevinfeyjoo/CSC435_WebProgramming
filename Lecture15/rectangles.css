@@ -1,0 +1,22 @@
+
+#rectanglearea {
+	width: 700px;
+	height: 500px;
+	border: 2px solid black;
+	position: relative;  /* so the rects' x/y coords are relative to me */
+}
+
+.rectangle {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border: 2px solid black;
+}
+
+.highlight {
+	background-color: yellow;
+}
+
+.movable {
+	position: absolute;
+}

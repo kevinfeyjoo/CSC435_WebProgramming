@@ -1,3 +1,5 @@
-funtion helloi(){
-  alert("Hi!")
+function helloi(){
+  alert('comingsoon');
+
 }
+window.onclick = helloi;

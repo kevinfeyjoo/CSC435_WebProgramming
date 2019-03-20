@@ -1,0 +1,18 @@
+/* CSC 435
+ *
+ * Style sheet for Exercise 1 (Bouncing Ball). 
+ */
+
+#ball {
+	position: absolute;
+	max-width: 50px;
+	top: 0px;
+	left: 20px;
+}
+
+#ballarea {
+	position: relative;
+	width: 600px;
+	height: 400px;
+	border: 2px dashed gray;
+}

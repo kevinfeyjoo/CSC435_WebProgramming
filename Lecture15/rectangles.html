@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Colored Rectangles</title>
+		<link href="rectangles.css" type="text/css" rel="stylesheet" />
+		<script src="rectangles.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<h1>
+			<div class="rectangle"></div>
+			Rectangle-It!
+			<div class="rectangle"></div>
+		</h1>
+
+		<canvas id="rectanglearea">
+		</canvas>
+		<fieldset>
+			<legend>controls:</legend>
+
+			<select id="count">
+				<option value="1">1</option>
+				<option value="50" selected="selected">50</option>
+				<option value="100">100</option>
+			</select>
+
+			<button id="color">Color</button>
+			<button id="move">Move</button>
+		</fieldset>
+
+		<div>
+			Rectangles are great!
+			They look like this:
+			<div class="rectangle"></div>
+		</div>
+	</body>
+</html>
