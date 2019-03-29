@@ -34,14 +34,14 @@
 			var rect = document.createElement("div");
 			rect.className = "rectangle";
 			document.getElementById("rectanglearea").appendChild(rect);
-}
+}	console.log(count); console.log(rect)
 
 	}
 
    	// Randomly color all of the rectangles
     function colorIt() {
-    	// your code goes here
-    	//you might find the following code snippts useful
+    	// your code goes her
+    	// you might find the following code snippts useful
     	//var r = Math.floor(Math.random() * 256);
     }
 

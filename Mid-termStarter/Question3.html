@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+    <link href="question3.css" type="text/css" rel="stylesheet" />
+    <script src="question3.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<h1>Name in a Blender</h1>
+
+		<div>
+			<span>Your name:</span>
+			<input id="yourname" type="text" size="16"/>
+		</div>
+
+		<div>
+			<span>Font:</span>
+			<select id="font">
+				<option>Arial</option>
+				<option>Comic Sans MS</option>
+				<option>Times New Roman</option>
+			</select>
+		</div>
+
+		<div>
+			<span>Position:</span>
+			<label><input id="random" name="position" type="radio" value="random" checked="checked" /> Random</label>
+			<label><input id="sequential" name="position" type="radio" value="sequential" /> Sequential</label>
+		</div>
+
+		<div>
+			<span>Go:</span>
+			<button id="blend">Blend my name!</button>
+		</div>
+
+		<div id="output"></div>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<html>
+    	<head>
+		<title>Question 1</title>
+		
+		<style type="text/css">
+			/* don't include this in question */
+			body {
+				background-color: white;
+				font-size: 16pt;
+			}
+			div span { 
+				/*1*/
+				padding-left: 0.25em; 
+				padding-right: 0.25em; 
+				background-color: yellow;
+				float: left;
+				border: 2px solid black;
+			}
+			div #div {
+				/*2 2*/
+				background-color: yellow;
+				font-weight: bold;
+				width: 100%;
+				display: block;
+				margin: auto;
+				text-align: center;
+			}
+			span .div {
+				/*3 3 3*/
+				float:right;
+				border: 2px solid black;
+				width: 25%;
+				text-align: center;
+
+			}
+			div .div {
+				/*4 4 4 4*/
+				width: 25%;
+				border: solid;
+				border-width: 2px;
+				float: right;
+				text-align: center;
+				margin-left: 30%;
+			}
+			div #span {
+				/*5 5 5 5 5*/
+				font-style: italic;
+				width: 25%;
+				border: 2px solid black;
+				text-align: center;
+				padding-top: 5px;
+				float: right;
+				margin-left: 100%;
+				margin-right: auto;
+
+			}
+			div .span {
+				/*6 6 6 6 6 6*/
+				width: 100%;
+				float: left;
+				padding-left: 50%;
+				border-top: 2px dotted black;
+
+				/*float: right; 
+				width: 25%; 
+				border: 2px solid black; 
+				text-align: center*/
+			}
+			/* end solution */
+		</style>
+	</head>
+    <body>
+<div>
+ <span>1</span>
+ <div id="div">2 2</div>
+</div>
+<span class="div"  style="float: right; width: 25%; border: 2px solid black; text-align: center">3 3 3</span> <!--Float right only works here. remove when corrected-->
+<div>
+ <div class="div">4 4 4 4</div>
+ <div id="span">5 5 5 5 5</div>
+ <div class="span">6 6 6 6 6 6</div>
+</div>
+        
+        </body>
+</html>
