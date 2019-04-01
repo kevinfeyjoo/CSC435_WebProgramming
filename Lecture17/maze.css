@@ -110,3 +110,8 @@ neighboring elements.  Necessary to avoid giving ids to the boundary divs
 	height: 150px;
 	width: 98px;
 }
+
+span {
+	border: 2px solid black;
+	width: 40px;
+}
