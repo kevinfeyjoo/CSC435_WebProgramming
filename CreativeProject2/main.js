@@ -1,12 +1,9 @@
 //new creative project
 window.onload = function () {
-  document.getElementById('pp').style.color = 'red';
-  var btn = document.getElementById("pp");
-  btn.onclick = moveback;
-  pp.style.left = '100px';
+  snow();
 }
 
-function moveback() {
-  
-  pp.style.left = '0px';
+function snow() {
+  var content_body = document.getElementById("home");
+  console.log(content_body);
 }
