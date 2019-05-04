@@ -56,7 +56,7 @@
 				var b = Math.floor(Math.random() * 256);
 				var rgb_num = "rgb("+r+","+g+","+b+")";
 				rects[i].style.backgroundColor = rgb_num;
-				h1_.style.backgroundColor = rgb_num;
+				//h1_.style.backgroundColor = rgb_num;
 			}
 		}
 	

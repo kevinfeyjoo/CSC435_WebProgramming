@@ -1,0 +1,2 @@
+Q: What does AJAX stand for?
+A: Asynchronous Javacript and XML

@@ -1,0 +1,2 @@
+Q: In the CSS color property, what does "RGB" stand for?
+A: Red Green Blue

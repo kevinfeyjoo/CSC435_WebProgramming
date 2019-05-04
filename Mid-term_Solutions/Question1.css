@@ -1,0 +1,9 @@
+			/* begin solution */
+body         { text-align: center; font-family: monospace; }
+#div         { background-color: yellow; font-weight: bold; }
+div span     { float: left; border: 2px solid black; }
+.div, #span  { float: right; width: 25%; border: 2px solid black; }
+#span        { clear: right; font-style: italic; }
+.span        { clear: right; border-top: 2px dashed black; }
+
+			/* end solution */

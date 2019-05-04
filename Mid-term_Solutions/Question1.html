@@ -1,0 +1,38 @@
+<html>
+    	<head>
+		<title>Question 1</title>
+		
+		<style type="text/css">
+			/* don't include this in question */
+			body {
+				background-color: white;
+				font-size: 16pt;
+			}
+			div span { padding-left: 0.25em; padding-right: 0.25em; }
+
+
+			/* begin solution */
+body         { text-align: center; font-family: monospace; }
+#div         { background-color: yellow; font-weight: bold; }
+div span     { float: left; border: 2px solid black; }
+.div, #span  { float: right; width: 25%; border: 2px solid black; }
+#span        { clear: right; font-style: italic; }
+.span        { clear: right; border-top: 2px dashed black; }
+
+			/* end solution */
+		</style>
+	</head>
+    <body>
+<div>
+ <span>1</span>
+ <div id="div">2 2</div>
+</div>
+<span class="div">3 3 3</span>
+<div>
+ <div class="div">4 4 4 4</div>
+ <div id="span">5 5 5 5 5</div>
+ <div class="span">6 6 6 6 6 6</div>
+</div>
+        
+        </body>
+</html>

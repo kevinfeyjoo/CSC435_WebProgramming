@@ -1,7 +1,9 @@
 #puzzlearea {
-    background-color: black;
     height: 400px; 
     width: 400px;
     /*margin-left: 35%;*/
 };
 
+body{
+    text-align: center;
+}

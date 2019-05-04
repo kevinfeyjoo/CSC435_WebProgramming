@@ -1,0 +1,2 @@
+Q: What does HTML stand for?
+A: Hypertext Markup Language

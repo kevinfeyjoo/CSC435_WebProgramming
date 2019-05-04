@@ -1,0 +1,2 @@
+Q: What does PHP stand for?
+A: Personal Home Page

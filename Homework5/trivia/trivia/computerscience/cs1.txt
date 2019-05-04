@@ -1,0 +1,2 @@
+Q: How many nodes are in a complete binary tree of height N?
+A: (2^N)-1

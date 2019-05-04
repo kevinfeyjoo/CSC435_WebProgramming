@@ -1,0 +1,2 @@
+Q: What does CSS stand for?
+A: Cascading style sheets

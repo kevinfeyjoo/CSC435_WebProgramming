@@ -1,0 +1,2 @@
+Q: What does DOM stand for?
+A: Document Object Model

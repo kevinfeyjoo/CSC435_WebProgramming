@@ -1,0 +1,56 @@
+
+
+body {
+	text-align: center;
+  font-family: "Century Gothic", Helvetica, sans-serif;
+	background-color: #e6fccd;
+}
+
+main {
+  width: 80%;
+  margin: auto auto;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  margin: auto auto;
+  width: 35%;
+}
+
+#categories, #card {
+	border: solid 3px #0aa;
+	background-color: #fff;
+	width: 50%;
+	margin: auto;
+	margin-top: 10px;
+  padding: 5px 10px;
+}
+
+button {
+	border: solid 2px #0aa;
+	margin: 20px auto;
+  padding: 6px;
+  width: 140px;
+}
+
+ul {
+  text-align: left;
+}
+
+li {
+  list-style: none;
+}
+
+li:hover {
+  color: #0aa;
+  cursor: pointer;
+}
+
+.selected-category {
+  color: #0aa;
+}
+
+.hidden {
+  display: none;
+}

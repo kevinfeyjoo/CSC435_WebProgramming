@@ -1,0 +1,2 @@
+Q: Which transport-layer protocol provides no handshake (and thus, no guarantee of delivery, etc) leading to increased unreliability along with the advantage of faster speeds?
+A: UDP (User Datagram Protocol)
