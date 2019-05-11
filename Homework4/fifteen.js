@@ -20,17 +20,19 @@ function __init__(){
     let backgorund = document.getElementById("puzzlearea");
     for (let i = 1; i < 5; i++) {
         for (let j = 1; j < 5; j++) {
-            let tile = document.createElement("div");
+            let tile = document.createElement("span");
             tile.id = "tile-" + i + "-" + j;
-            tile.style.backgroundPosition = 
-            tile.style.top =
-            tile.style.left =
+            //tile.style.backgroundPosition = 
+            tile.style.top = (i*100+1*i+1)+'px';
+            tile.style.left = (j*100+1*j+1)+'px';
+            tile.style.border = "thick solid #black";
             backgorund.appendChild(tile);
 
             if (i == 4 && j ==4) {
                 tile.classList.add("blank"); 
-                document.getElementsByClassName("blank").style.width = "10px";
-                document.getElementsByClassName("blank").style.height = "10px";
+                document.getElementsByClassName("blank").style.width = "90px";
+                document.getElementsByClassName("blank").style.height = "90px";
+                document.getElementsByClassName("blank").style.border = "thick solid #black";
                    
             }
 
