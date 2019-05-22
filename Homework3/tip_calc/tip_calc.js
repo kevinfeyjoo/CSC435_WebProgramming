@@ -1,16 +1,17 @@
-function tip_calc(subtotal, tip) {
-  var subtotal = document.getElementById("subtotal").querySelectorAll(".subtotal").value;
-  var tip = document.getElementById("tip").querySelectorAll(".tip").value;
-  var result = subtotal + subtotal * (tip/100) ;
+function tip_calc() {
+  let subtotal = parseInt(document.getElementById("subtotal").value);
+  let tip = parseInt(document.getElementById("tip").value);
+  tip /= 100;
+  tip *= subtotal; 
+  let result = subtotal + tip;
 
-  if (subtotal != isNaN) {
-    alert("NaN. heres ane example of it working");
-    result = "$Moneyyyy";
-  } else {
-    result = "$"+result;
-  }
+  console.log(subtotal);
+  console.log(tip);
+  console.log(result);
+  
+  
 
-  document.getElementById("resultArea").innerHTML = result;
+  document.getElementById("resultArea").innerHTML = "Your total is: $"+result;
 }
 
 window.onload = function() {

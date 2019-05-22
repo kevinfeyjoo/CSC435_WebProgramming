@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <script src="tip_calc.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="tip_calc.css">
     <title></title>
   </head>
@@ -12,11 +13,11 @@
 
     <img src="AU.png" alt="" height="50px" width="70px"><b>Tip Calculator</b>
     <form class="" action="index.html" method="post">
-      <div id="subtotal">
-        <input type="text" name="subtotal" class="subtotal">$ Subtotal <br>
+      <div>
+        <input type="text" name="subtotal" id="subtotal" value="0">$ Subtotal <br>
       </div>
-      <div id="tip">
-        <input type="text" name="tip" class="tip">% Tip
+      <div>
+        <input type="range" name="tip" id="tip" min="0" max="50">% Tip (0-50%)
       </div>
     </form>
     <button type="button" name="button" id="button">Calculate</button>

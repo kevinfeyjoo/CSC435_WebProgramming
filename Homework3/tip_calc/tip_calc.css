@@ -1,5 +1,5 @@
-input.tip {
-  background-color: red;
+input#tip {
+  background-color: rgb(224, 80, 80);
 }
 #top {
   border-bottom: black 1px solid;
