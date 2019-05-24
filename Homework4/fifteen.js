@@ -23,8 +23,8 @@ function __init__(){
             let tile = document.createElement("span");
             tile.id = "tile-" + i + "-" + j;
             //tile.style.backgroundPosition = 
-            tile.style.top = (i*100+1*i+1)+'px';
-            tile.style.left = (j*100+1*j+1)+'px';
+            tile.style.top = (i*130+1*i+1)+'px';
+            tile.style.left = (j*1+110*j+1)+'px';
             tile.style.border = "thick solid #black";
             backgorund.appendChild(tile);
 
