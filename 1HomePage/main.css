@@ -1,3 +1,14 @@
 #p_list{
   list-style: none;
 }
+#main{
+  float: left;
+  padding-right: 15px;
+  border: 2px solid black;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  height: -webkit-fill-available;
+}
+body{
+  float: right;
+}
