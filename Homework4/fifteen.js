@@ -1,46 +1,58 @@
+/*
 
-/* 
-double For loop (column and rows) to split the background picture into 15 pieces 
+author @kevin feyjoo
+last updated May 25, 2019
 
-backgorund position
-
-Put backgreound image in background into css in JS
-
- */
-
+*/
+(function() {
+	"use strict";
 
 
 window.onload = function(){
-    let backgorund = document.getElementById("puzzlearea");
-    backgorund.style.backgroundImage = "URL('background.jpg')";
     __init__();
+
 };
 
 function __init__(){
+    var positions = [
+        '0px 0px',	
+        '-100px 0px',	
+        '-200px 0px',	
+        '-300px 0px',
+        '0px -100px',
+        '-100px -100px',	
+        '-200px -100px',	
+        '-300px -100px',
+        '0px -200px',	
+        '-100px -200px',	
+        '-200px -200px',	
+        '-300px -200px',
+        '0px -300px',	
+        '-100px -300px',	
+        '-200px -300px'	
+    ];
     let backgorund = document.getElementById("puzzlearea");
-    for (let i = 1; i < 5; i++) {
-        for (let j = 1; j < 5; j++) {
-            let tile = document.createElement("span");
+    //backgorund.style.backgroundImage = "URL('background.jpg')";
+
+    for (let i = 0; i < 4; i++) {
+        for (let j = 0; j < 4; j++) {
+            let tile = document.createElement("div");
             tile.id = "tile-" + i + "-" + j;
-            //tile.style.backgroundPosition = 
-            tile.style.top = (i*130+1*i+1)+'px';
-            tile.style.left = (j*1+110*j+1)+'px';
-            tile.style.border = "thick solid #black";
+            tile.style.top = (i*102+122)+'px';
+            tile.style.left = (j*1+100*j+1)+'px';
+            //tile.style.backgroundPosition = positions[i];
+
+            
             backgorund.appendChild(tile);
 
-            if (i == 4 && j ==4) {
-                tile.classList.add("blank"); 
-                document.getElementsByClassName("blank").style.width = "90px";
-                document.getElementsByClassName("blank").style.height = "90px";
-                document.getElementsByClassName("blank").style.border = "thick solid #black";
-                   
-            }
 
 
 
 
-        }
-        
+            
+
+            
+        }      
     }
 }
 
@@ -68,30 +80,12 @@ function move(){
  
 function shuffle() {
     var shuffle = document.getElementById('shufflebutton');
-    shuffle.onclick = console.log(positions);
+    let test = document.querySelectorAll("#puzzlearea div");
+    console.log(test);
+    //shuffle.onclick = console.log(positions);
 /* run 1,000 times */
 };
-
-
-var positions = [
-    '0px 0px',	
-    '-100px 0px',	
-    '-200px 0px',	
-    '-300px 0px',
-    '0px -100px',
-    '-100px -100px',	
-    '-200px -100px',	
-    '-300px -100px',
-    '0px -200px',	
-    '-100px -200px',	
-    '-200px -200px',	
-    '-300px -200px',
-    '0px -300px',	
-    '-100px -300px',	
-    '-200px -300px'	
-];
-
-
-
-
 window.addEventListener('load', shuffle, false)
+
+
+})();
