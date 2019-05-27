@@ -8,22 +8,10 @@
     position: relative;
 }
 
-#puzzlearea div{
-	position: absolute;
-	display: block;
-	width: 100px;
-	height: 100px;
-    border-radius: 4px;
-    border: 1px solid black;
-}
-
-#puzzlearea span #number{
-
-}
-
 .blank {
     width: 100px;
     height: 100px;
-    border: 1px solid black;
-    
+    /* border: 1px solid black; */
+    border: white;
+    background-color: white;
 }
