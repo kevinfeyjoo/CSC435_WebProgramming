@@ -32,7 +32,7 @@ function __init__(){
         '-200px -300px'	
     ];
     let backgorund = document.getElementById('puzzlearea');
-    backgorund.style.backgroundImage = 'URL("background.jpg")';
+    backgorund.style.backgroundImage = 'URL("bmw.jpg")';
 
     for (let i = 0; i < 4; i++) {
         for (let j = 0; j < 4; j++) {
@@ -40,13 +40,21 @@ function __init__(){
             tile.id = 'tile-' + i + '-' + j;
             tile.style.top = (i*102+128)+'px';
             tile.style.left = (j*1+100*j+1)+'px';
-            tile.style.positiom = 'absolute';
+            tile.style.position = 'absolute';
             tile.style.display = 'block';
             tile.style.width = '100px';
             tile.style.height = '100px';
             //tile.style.backgroundPosition = positions[i];
             tile.style.border = '2px solid black';
+            
             backgorund.appendChild(tile);
+
+
+            
+
+
+            
+
             
         };      
     };
@@ -82,7 +90,7 @@ function shuffle() {
     //shuffle.onclick = console.log(positions);
 /* run 1,000 times */
 };
-window.addEventListener('load', shuffle, false)
+window.addEventListener('load', shuffle, false)//this allows shufft to run without pressing 
 
 
 })();

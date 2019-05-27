@@ -1,12 +1,7 @@
 #puzzlearea {
     height: 400px; 
     width: 400px;
-    /*margin-left: 35%;*/
 };
-
-#puzzlearea {
-    position: relative;
-}
 
 .blank {
     width: 100px;
