@@ -14,23 +14,6 @@ window.onload = function(){
 };
 
 function __init__(){
-    var positions = [
-        '0px 0px',	
-        '-100px 0px',	
-        '-200px 0px',	
-        '-300px 0px',
-        '0px -100px',
-        '-100px -100px',	
-        '-200px -100px',	
-        '-300px -100px',
-        '0px -200px',	
-        '-100px -200px',	
-        '-200px -200px',	
-        '-300px -200px',
-        '0px -300px',	
-        '-100px -300px',	
-        '-200px -300px'	
-    ];
     let backgorund = document.getElementById('puzzlearea');
     backgorund.style.backgroundImage = 'URL("background1.jpeg")';
 
@@ -44,8 +27,9 @@ function __init__(){
             //tile.style.display = 'block';
             tile.style.width = '100px';
             tile.style.height = '100px';
-            //tile.style.backgroundPosition = positions[i];
             tile.style.border = '3px solid black';
+
+            
             
             backgorund.appendChild(tile);
 
@@ -86,7 +70,38 @@ function shuffle() {
     var shuffle = document.getElementById('shufflebutton');
     let test = document.querySelectorAll('#puzzlearea div');
     test[15].className = 'blank';
+    test[15].style.background = "white";
+    //test[15].style.border = "none";
     console.log(test[15].classList);
+
+
+
+    var positions = [
+        '0px 0px',	
+        '-100px 0px',	
+        '-200px 0px',	
+        '-300px 0px',
+        '0px -100px',
+        '-100px -100px',	
+        '-200px -100px',	
+        '-300px -100px',
+        '0px -200px',	
+        '-100px -200px',	
+        '-200px -200px',	
+        '-300px -200px',
+        '0px -300px',	
+        '-100px -300px',	
+        '-200px -300px'	
+    ];
+
+    
+
+    for (let x = 0; x < 15; x++) {
+        //for i in tiles, positions[i]
+
+        test[x].style.position = positions[x];
+        
+    }
     //shuffle.onclick = console.log(positions);
 /* run 1,000 times */
 };

@@ -2,6 +2,7 @@
     height: 400px; 
     width: 400px;
     position: inherit;
+    background-position: center;
 };
 
 .blank {
@@ -9,5 +10,52 @@
     height: 100px;
     /* border: 1px solid black; */
     border: white;
-    background-color: white;
+    /* background-color: white; */
+}
+
+div#tile0-0{
+    background-position: '0px 0px';
+}
+
+div#tile0-1{
+    background-position: '-100px 0px';
+}
+div#tile0-2{
+    background-position: '-200px 0px';
+}
+div#tile0-3{
+    background-position: '-300px 0px';
+}
+div#tile1-0{
+    background-position: '0px -100px';
+}
+div#tile1-1{
+    background-position: '-100px -100px';
+}
+div#tile1-2{
+    background-position: '-200px -100px';
+}
+div#tile1-3{
+    background-position: '-300px -100px';
+}
+div#tile2-0{
+    background-position: '0px -200px';
+}
+div#tile2-1{
+    background-position: '-100px -200px'
+}
+div#tile2-2{
+    background-position: '-200px -200px'
+}
+div#tile2-3{
+    background-position: '-300px -200px';
+}
+div#tile3-0{
+    background-position: '0px -300px';
+}
+div#tile3-1{
+    background-position: '-100px -300px';
+}
+div#tile3-2{
+    background-position: '-200px -300px';
 }
