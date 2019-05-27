@@ -32,7 +32,7 @@ function __init__(){
         '-200px -300px'	
     ];
     let backgorund = document.getElementById('puzzlearea');
-    backgorund.style.backgroundImage = 'URL("bmw.jpg")';
+    backgorund.style.backgroundImage = 'URL("background1.jpeg")';
 
     for (let i = 0; i < 4; i++) {
         for (let j = 0; j < 4; j++) {
@@ -41,11 +41,11 @@ function __init__(){
             tile.style.top = (i*102+128)+'px';
             tile.style.left = (j*1+100*j+1)+'px';
             tile.style.position = 'absolute';
-            tile.style.display = 'block';
+            //tile.style.display = 'block';
             tile.style.width = '100px';
             tile.style.height = '100px';
             //tile.style.backgroundPosition = positions[i];
-            tile.style.border = '2px solid black';
+            tile.style.border = '3px solid black';
             
             backgorund.appendChild(tile);
 

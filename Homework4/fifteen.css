@@ -1,6 +1,7 @@
 #puzzlearea {
     height: 400px; 
     width: 400px;
+    position: inherit;
 };
 
 .blank {
