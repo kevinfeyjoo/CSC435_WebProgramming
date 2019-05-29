@@ -3,7 +3,9 @@
     width: 400px;
     position: inherit;
     background-position: center;
+    text-align: center;
 };
+
 
 .blank {
     width: 100px;
@@ -13,10 +15,17 @@
     /* background-color: white; */
 }
 
+
+
+
+
+
+
+
+/* 
 div#tile0-0{
     background-position: '0px 0px';
 }
-
 div#tile0-1{
     background-position: '-100px 0px';
 }
@@ -58,4 +67,4 @@ div#tile3-1{
 }
 div#tile3-2{
     background-position: '-200px -300px';
-}
+} */

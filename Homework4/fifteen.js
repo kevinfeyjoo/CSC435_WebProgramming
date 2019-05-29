@@ -9,25 +9,43 @@ last updated May 25, 2019
 
 
 window.onload = function(){
+    let controls = document.getElementById('controls');
+    controls.innerHTML = '<button id="shufflebutton">Shuffle</button>' + '<button id="chosedif">Shuffle IMG</button>';
+
+    chooseimg();
     __init__();
 
 };
 
+function chooseimg(){
+    
+    let chosedif = document.getElementById('chosedif');
+    let background = document.getElementById('puzzlearea');
+    chosedif.onclick = function(){
+        //create background list
+
+        for(let i = 0; i < 5; i++){
+            //choose a random img
+            var imgs = ['grinch4.png','grinch5.png', 'grinch6.png', 'grinch7.png'];
+        }
+    }
+}
+
 function __init__(){
     let backgorund = document.getElementById('puzzlearea');
-    backgorund.style.backgroundImage = 'URL("background1.jpeg")';
+    //backgorund.style.backgroundImage = 'URL("grinch5.png")';
 
     for (let i = 0; i < 4; i++) {
         for (let j = 0; j < 4; j++) {
             let tile = document.createElement('div');
             tile.id = 'tile-' + i + '-' + j;
-            tile.style.top = (i*102+128)+'px';
-            tile.style.left = (j*1+100*j+1)+'px';
+            tile.style.top = (i*104+120)+'px';
+            tile.style.left = (j*1+104*j+1)+'px';
             tile.style.position = 'absolute';
             //tile.style.display = 'block';
             tile.style.width = '100px';
             tile.style.height = '100px';
-            tile.style.border = '3px solid black';
+            tile.style.border = '4px solid black';
 
             
             
@@ -72,7 +90,6 @@ function shuffle() {
     test[15].className = 'blank';
     test[15].style.background = "white";
     //test[15].style.border = "none";
-    console.log(test[15].classList);
 
 
 
@@ -98,8 +115,9 @@ function shuffle() {
 
     for (let x = 0; x < 15; x++) {
         //for i in tiles, positions[i]
-
-        test[x].style.position = positions[x];
+        console.log();
+        test[x].innerHTML = "<h1>"+parseInt(x+1)+"</h1>";
+        
         
     }
     //shuffle.onclick = console.log(positions);
