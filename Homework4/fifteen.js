@@ -1,8 +1,8 @@
 /*
-
-author @kevin feyjoo
-last updated May 25, 2019
-
+*
+*   author @kevin feyjoo
+*   last updated May 30, 2019
+*
 */
 (function() {
 	'use strict';
@@ -33,34 +33,37 @@ function chooseimg(){
 
 function __init__(){
     let backgorund = document.getElementById('puzzlearea');
-    //backgorund.style.backgroundImage = 'URL("grinch5.png")';
+    backgorund.style.backgroundImage = 'URL("grinch5.png")';
 
-    for (let i = 0; i < 4; i++) {
-        for (let j = 0; j < 4; j++) {
-            let tile = document.createElement('div');
+    var number = 1;
+    for (let i = 0; i <= 3; i++) {
+        for (let j = 0; j <= 3; j++) {
+            let tile = document.createElement('span');
             tile.id = 'tile-' + i + '-' + j;
-            tile.style.top = (i*104+120)+'px';
-            tile.style.left = (j*1+104*j+1)+'px';
+            tile.style.top = (i*102)+'px';
+            tile.style.left = (j*1+100*j)+'px';
+            
+            
+            
+            /* ¬ßeføre s†¥le iπ js. s†¥le iπ css … ®*/
+            
             tile.style.position = 'absolute';
-            //tile.style.display = 'block';
+            tile.style.display = 'block';
             tile.style.width = '100px';
             tile.style.height = '100px';
-            tile.style.border = '4px solid black';
-
+            tile.style.border = '2px solid black';
+            if (number <= 15) {
+                tile.classList.add('number');
+				tile.innerHTML = (number++).toString();
+            } else {
+                tile.className = 'blank';
+            }
             
             
-            backgorund.appendChild(tile);
-
-
-            
-
-
-            
-
-            
-        };      
-    };
-};
+            backgorund.appendChild(tile);   
+        }      
+    }
+}
 
 function moveable(){
     let backgorund = document.getElementById('puzzlearea');
@@ -86,10 +89,7 @@ function move(){
  
 function shuffle() {
     var shuffle = document.getElementById('shufflebutton');
-    let test = document.querySelectorAll('#puzzlearea div');
-    test[15].className = 'blank';
-    test[15].style.background = "white";
-    //test[15].style.border = "none";
+    let test = document.querySelectorAll('#puzzlearea span');
 
 
 
@@ -113,14 +113,14 @@ function shuffle() {
 
     
 
-    for (let x = 0; x < 15; x++) {
+    /* for (let x = 0; x < 15; x++) {
         //for i in tiles, positions[i]
         console.log();
         test[x].innerHTML = "<h1>"+parseInt(x+1)+"</h1>";
         
         
-    }
-    //shuffle.onclick = console.log(positions);
+    } */
+    shuffle.onclick = console.log(test[1]);
 /* run 1,000 times */
 };
 window.addEventListener('load', shuffle, false)//this allows shufft to run without pressing 
