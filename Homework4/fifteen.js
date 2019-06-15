@@ -7,15 +7,17 @@
 (function() {
 	'use strict';
     let backgorund = document.getElementById('puzzlearea');
+    var movable = false;
 
     window.onload = function(){
         let controls = document.getElementById('controls');
         __init__();
-
+        shuffle();
     };
 
     function __init__(){
         let backgorund = document.getElementById('puzzlearea');
+        backgorund.innerHTML = "";
         backgorund.style.backgroundImage = 'URL("grinch4.png")';
 
         var number = 1;
@@ -41,99 +43,32 @@
                 } else {
                     tile.className = 'blank';
                 }
-                backgorund.appendChild(tile);   
+                backgorund.appendChild(tile);
+
+
+                tile.onclick = function(){
+                    let tiles = {
+                        left: tile.style.left,
+                        top: tile.style.top
+                    };
+                    //console.log("(Left, Top): "+"("+left +","+ top+")"+" Class Name --> "+classs);
+                    console.log(tiles)
+
+                }   
             }      
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    function moveable(tile){
-        let backgorund = document.getElementById('puzzlearea');
-        let movable = false;
-        
-        let neighbors = 'neighbor of' ;
-    /* 
-    find neighbors of blank tile. return a list of 4 elements (or 2 if in a corner).
-    return a boolean value to move function. 
-    */
-        if(tile.clasName != 'blank'){
-            // Tries to get empty adjacent tile
-            let empty = querySelectorAll('#puzzlearea .blank');
-            console.log(empty);
-			
-			if(empty){
-                // Temporary data
-				var tmp = {style: tile.style.cssText, id: tile.id};
-				
-				// Exchanges id and style values
-				tile.style.cssText = emptytile.style.cssText;
-				tile.id = emptytile.id;
-				emptytile.style.cssText = tmp.style;
-				emptytile.id = tmp.id;
-				
-			}
-
-        }
-        
-
-
-    function adjacentTiles(tile){
-/* 
-        this function will take each row and find where blank
-        is in relation to others
-         */
-
-        
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-    function animation(tile, tile1){
-        let backgorund = document.getElementById('puzzlearea');
-    /* 
-
-    */  
-        
-    }
-
-
-
-    
     function shuffle() {
         var shuffle = document.getElementById('shufflebutton');
         let tile = document.querySelectorAll('#puzzlearea span');
         let empty = document.querySelectorAll('#puzzlearea .blank');
-        console.log(empty);
+        shuffle.onclick = function(){
+            console.log(empty);
+            
+        }
  
     /* run 1,000 times */
     };
-    window.addEventListener('load', shuffle, false)//this allows shufft to run without pressing 
-
+    
 })();
