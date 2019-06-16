@@ -68,8 +68,6 @@
                     let l = tile.style.left;
                     let t = tile.style.top;
                     
-                    //tile.style.left = l + 100 + 'px';
-                    
                     console.log("BL "+blankL + " BT "+blankT);
                     console.log("L "+l + " T "+t);
 
