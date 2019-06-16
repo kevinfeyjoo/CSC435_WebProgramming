@@ -24,12 +24,12 @@
             for (let j = 0; j <= 3; j++) {
 
                 /* _______create tiles___________ */
-
+                let blankL, blankT;
                 let tile = document.createElement('span');
                 tile.id = 'tile-' + i + '-' + j;
                 tile.style.top = (i * 98) + 'px';
                 tile.style.left = (j + 96 * j) + 'px';
-                tile.style.backgroundImage = 'URL("grinch4.png")';
+                tile.style.backgroundImage = 'URL("background1.jpeg")';
 
                 /*______________S†¥le______________*/
 
@@ -53,6 +53,9 @@
                 } else {
                     tile.innerHTML = '';
                     tile.className = 'blank';
+                    blankL= tile.style.left;
+                    blankT = tile.style.top;
+
                 }
 
                 /* _________Add tiles to screen________ */
@@ -62,6 +65,14 @@
                 /* _____________Moveable____________ */
 
                 tile.onclick = function () {
+                    let l = tile.style.left;
+                    let t = tile.style.top;
+                    
+                    //tile.style.left = l + 100 + 'px';
+                    
+                    console.log("BL "+blankL + " BT "+blankT);
+                    console.log("L "+l + " T "+t);
+
                     let tiles = document.querySelectorAll('#puzzlearea span');
                     for(let i = 0; tiles.length; i++){
                         
