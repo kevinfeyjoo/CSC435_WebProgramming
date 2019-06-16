@@ -7,7 +7,6 @@
 (function () {
     'use strict';
     let backgorund = document.getElementById('puzzlearea');
-    let tiles = [];
     var movable = false;
 
     window.onload = function () {
@@ -31,9 +30,6 @@
                 tile.style.top = (i * 98) + 'px';
                 tile.style.left = (j + 96 * j) + 'px';
                 tile.style.backgroundImage = 'URL("grinch4.png")';
-                tile.style.backgroundPositionX = (-1*j*100) + 'px';
-                tile.style.backgroundPositionY = (-1*i*100) + 'px';
-
 
                 /*______________S†¥le______________*/
 
@@ -44,11 +40,18 @@
                 tile.style.border = '4px solid black';
 
                 /* ____________Add Number___________ */
+                if (i*j == 9) {
+                    tile.style.backgroundImage = 'none';
+                    tile.style.border = 'none';
+                }
 
                 if (number <= 15) {
                     tile.classList.add('number');
+                    tile.style.backgroundPositionX = (-1*j*100) + 'px';
+                    tile.style.backgroundPositionY = (-1*i*100) + 'px';
                     tile.innerHTML = (number++).toString();
                 } else {
+                    tile.innerHTML = '';
                     tile.className = 'blank';
                 }
 
@@ -59,6 +62,10 @@
                 /* _____________Moveable____________ */
 
                 tile.onclick = function () {
+                    let tiles = document.querySelectorAll('#puzzlearea span');
+                    for(let i = 0; tiles.length; i++){
+                        
+                    }
                     moveabe();
                 }
             }
@@ -68,18 +75,15 @@
     function moveabe() {
 
         /* ________Array will track empty position_______ */
-
-        let tile = document.querySelectorAll('#puzzlearea span');//all tiles inluding blank
-        let tiles = [];//array of all tiles
+        console.log(tile);
+        //let tile = document.querySelectorAll('#puzzlearea span');//all tiles inluding blank
         let empty = document.querySelectorAll('#puzzlearea .blank');//blank tile
         let tile_top, tile_left;//tile properties
 
-
         for (let i = 0; i <= tile.length; i++) {
             tiles.push([tile[i]]);
-            
+             
         }
-        console.log(tiles[0]);//test
     }
 
 
