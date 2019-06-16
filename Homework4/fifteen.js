@@ -1,12 +1,13 @@
 /*
 *
 *   author @kevin feyjoo
-*   last updated June 10, 2019
+*   last updated June 16, 2019
 *
 */
 (function () {
     'use strict';
     let backgorund = document.getElementById('puzzlearea');
+    let tiles = [];
     var movable = false;
 
     window.onload = function () {
@@ -18,28 +19,31 @@
     function __init__() {
         let backgorund = document.getElementById('puzzlearea');
         backgorund.innerHTML = "";
-        backgorund.style.backgroundImage = 'URL("grinch4.png")';
 
         var number = 1;
         for (let i = 0; i <= 3; i++) {
             for (let j = 0; j <= 3; j++) {
 
                 /* _______create tiles___________ */
-                
+
                 let tile = document.createElement('span');
                 tile.id = 'tile-' + i + '-' + j;
-                tile.style.top = (i * 100) + 'px';
-                tile.style.left = (j * 1 + 99 * j) + 'px';
+                tile.style.top = (i * 98) + 'px';
+                tile.style.left = (j + 96 * j) + 'px';
+                tile.style.backgroundImage = 'URL("grinch4.png")';
+                tile.style.backgroundPositionX = (-1*j*100) + 'px';
+                tile.style.backgroundPositionY = (-1*i*100) + 'px';
 
-                /* ¬ßeføre s†¥le iπ js. s†¥le iπ css … ®*/
+
+                /*______________S†¥le______________*/
 
                 tile.style.position = 'absolute';
                 tile.style.display = 'block';
-                tile.style.width = '100px';
-                tile.style.height = '100px';
+                tile.style.width = '90px';
+                tile.style.height = '90px';
                 tile.style.border = '4px solid black';
 
-                /* _______________________________________ */
+                /* ____________Add Number___________ */
 
                 if (number <= 15) {
                     tile.classList.add('number');
@@ -47,9 +51,12 @@
                 } else {
                     tile.className = 'blank';
                 }
+
+                /* _________Add tiles to screen________ */
+                
                 backgorund.appendChild(tile);
 
-                /* _______________________________________ */
+                /* _____________Moveable____________ */
 
                 tile.onclick = function () {
                     moveabe();
@@ -59,12 +66,20 @@
     }
 
     function moveabe() {
-        //
-        let tiles = document.querySelectorAll('#puzzlearea span');
-        let empty = document.querySelectorAll('#puzzlearea .blank');
 
-        console.log(tiles[15]);
-        console.log(empty);
+        /* ________Array will track empty position_______ */
+
+        let tile = document.querySelectorAll('#puzzlearea span');//all tiles inluding blank
+        let tiles = [];//array of all tiles
+        let empty = document.querySelectorAll('#puzzlearea .blank');//blank tile
+        let tile_top, tile_left;//tile properties
+
+
+        for (let i = 0; i <= tile.length; i++) {
+            tiles.push([tile[i]]);
+            
+        }
+        console.log(tiles[0]);//test
     }
 
 
