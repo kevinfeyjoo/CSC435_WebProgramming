@@ -13,7 +13,6 @@
         let controls = document.getElementById('controls');
         __init__();
         shuffle();
-        moveabe();
     };
 
     function __init__() {
@@ -24,12 +23,13 @@
         var number = 1;
         for (let i = 0; i <= 3; i++) {
             for (let j = 0; j <= 3; j++) {
+
+                /* _______create tiles___________ */
+                
                 let tile = document.createElement('span');
                 tile.id = 'tile-' + i + '-' + j;
                 tile.style.top = (i * 100) + 'px';
                 tile.style.left = (j * 1 + 99 * j) + 'px';
-
-
 
                 /* ¬ßeføre s†¥le iπ js. s†¥le iπ css … ®*/
 
