@@ -1,7 +1,7 @@
 /*
 *
 *   author @kevin feyjoo
-*   last updated June 16, 2019
+*   last updated June 17, 2019
 *
 */
 (function () {
@@ -77,7 +77,7 @@
         
         if(tile.className != 'blank'){
             
-            
+
         }
 
     }
