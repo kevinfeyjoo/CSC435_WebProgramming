@@ -53,8 +53,7 @@
                 } else {
                     tile.innerHTML = '';
                     tile.className = 'blank';
-                    blankL= tile.style.left;
-                    blankT = tile.style.top;
+                    
 
                 }
 
@@ -78,9 +77,11 @@
 
             // moves clicked tile to blank stop by switching id #
             //current bug. when switching id's 'endefined' shows up
-            console.log(placeHolder.id);
-			tile.id = blankTile.id;
-			blankTile.id = placeHolder.id;
+            console.log(placeHolder.style);
+            tile.id = blankTile.id;
+            tile.style = blankTile.style;
+            blankTile.id = placeHolder.id;
+            blankTile.style = placeHolder.style;
         }
 
     }
