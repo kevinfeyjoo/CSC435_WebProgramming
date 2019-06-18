@@ -1,3 +1,7 @@
-window.onload = function() {
-  alert("test");
-};
+(function(){
+  "use strict";
+  window.onload = function(){
+    console.log();
+  }
+
+})();
