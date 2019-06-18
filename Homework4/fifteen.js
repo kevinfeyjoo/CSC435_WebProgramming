@@ -13,6 +13,7 @@
     window.onload = function () {
         let controls = document.getElementById('controls');
         __init__();
+        clearInterval(__init__);
         shuffle();
     };
 
@@ -45,18 +46,23 @@
                     tile.style.border = 'none';
                 }
 
-                if (number <= 15) {
+
+
+
+                if (number <= 15) {       //ååååååBUGGGGGGGGGGGG
                     tile.classList.add('number');
                     tile.style.backgroundPositionX = (-1*col*100) + 'px';
                     tile.style.backgroundPositionY = (-1*row*100) + 'px';
                     tile.innerHTML = (number++).toString();
                 } else {
                     tile.innerHTML = '';
-                    tile.className = 'blank';
-                    
+                    tile.className = 'blank';              
 
-                }
+                }                       //ååååååBUGGGGGGGGGGGG
 
+
+
+                
                 /* _________Add tiles to screen________ */
                 
                 background.appendChild(tile);
@@ -75,9 +81,8 @@
         if(tile.className != 'blank'){	
             var placeHolder = {style: tile.style.cssText, id: tile.id}; //holds current clicked tile id. gives it to Blank.
 
-            // moves clicked tile to blank stop by switching id #
-            //current bug. when switching id's 'endefined' shows up
-            console.log(placeHolder.style);
+            // moves clicked tile to blank spot by switching id's
+            //CURRENT BUG == ROW-COL 3-3 will not display anything but BLANK
             tile.id = blankTile.id;
             tile.style = blankTile.style;
             blankTile.id = placeHolder.id;
@@ -93,8 +98,17 @@
     function shuffle() {
         var shuffle = document.getElementById('shufflebutton');
         shuffle.onclick = function () {
+            /* 
+            for (~1000 times):
+                neighbors = [].
+                for each neighbor n that is directly up, down, left, right from empty square:
+                    if n exists and is movable:
+                        neighbors.push(n).
+                randomly choose an element i from neighbors.
+                move neighbors[i] to the location of the empty square.
+            */
 
-        } /* run 1,000 times */
+        } 
     };
 
 })();
