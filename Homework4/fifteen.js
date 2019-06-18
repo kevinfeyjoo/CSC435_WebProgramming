@@ -6,9 +6,10 @@
 */
 (function () {
     'use strict';
-    let backgorund = document.getElementById('puzzlearea');
+    let background = document.getElementById('puzzlearea');
     var movable = false;
-
+    let tile = document.querySelectorAll('#puzzlearea span');
+    
     window.onload = function () {
         let controls = document.getElementById('controls');
         __init__();
@@ -16,8 +17,8 @@
     };
 
     function __init__() {
-        let backgorund = document.getElementById('puzzlearea');
-        backgorund.innerHTML = "";
+        let background = document.getElementById('puzzlearea');
+        background.innerHTML = "";
 
         var number = 1;
         for (let i = 0; i <= 3; i++) {
@@ -60,52 +61,38 @@
 
                 /* _________Add tiles to screen________ */
                 
-                backgorund.appendChild(tile);
+                background.appendChild(tile);
 
                 /* _____________Moveable____________ */
 
-                tile.onclick = function () {
-                    let l = tile.style.left;
-                    let t = tile.style.top;
-                    
-                    console.log("BL "+blankL + " BT "+blankT);
-                    console.log("L "+l + " T "+t);
-
-                    let tiles = document.querySelectorAll('#puzzlearea span');
-                    for(let i = 0; tiles.length; i++){
-                        
-                    }
-                    moveabe();
+                tile.onclick = function (e) {
+                    moveabe(e.target);//returns tile that 'triggered the event'
                 }
             }
         }
     }
 
-    function moveabe() {
-
-        /* ________Array will track empty position_______ */
-        console.log(tile);
-        //let tile = document.querySelectorAll('#puzzlearea span');//all tiles inluding blank
-        let empty = document.querySelectorAll('#puzzlearea .blank');//blank tile
-        let tile_top, tile_left;//tile properties
-
-        for (let i = 0; i <= tile.length; i++) {
-            tiles.push([tile[i]]);
-             
+    function moveabe(tile) {
+        /* ________IF moveable shift to empty_______ */
+        
+        if(tile.className != 'blank'){
+            
+            
         }
+
     }
 
+    
+
+    function emptyTile(){
+        return document.querySelector('.blank');
+    }
 
     function shuffle() {
         var shuffle = document.getElementById('shufflebutton');
-        let tile = document.querySelectorAll('#puzzlearea span');
-        let empty = document.querySelectorAll('#puzzlearea .blank');
         shuffle.onclick = function () {
-            console.log(empty);
 
-        }
-
-        /* run 1,000 times */
+        } /* run 1,000 times */
     };
 
 })();
