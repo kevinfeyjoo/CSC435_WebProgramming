@@ -6,10 +6,6 @@
 */
 (function () {
     'use strict';
-    let background = document.getElementById('puzzlearea');
-    var movable = false;
-    let tile = document.querySelectorAll('#puzzlearea span');
-    
     window.onload = function () {
         let controls = document.getElementById('controls');
         __init__();
