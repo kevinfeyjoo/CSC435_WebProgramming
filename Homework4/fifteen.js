@@ -1,7 +1,7 @@
 /*
 *
 *   author @kevin feyjoo
-*   last updated June 17, 2019
+*   last updated June 18, 2019
 *
 */
 (function () {
@@ -21,15 +21,14 @@
         background.innerHTML = "";
 
         var number = 1;
-        for (let i = 0; i <= 3; i++) {
-            for (let j = 0; j <= 3; j++) {
+        for (let row = 0; row <= 3; row++) {
+            for (let col = 0; col <= 3; col++) {
 
                 /* _______create tiles___________ */
-                let blankL, blankT;
                 let tile = document.createElement('span');
-                tile.id = 'tile-' + i + '-' + j;
-                tile.style.top = (i * 98) + 'px';
-                tile.style.left = (j + 96 * j) + 'px';
+                tile.id = 'tile-' + row + '-' + col;
+                tile.style.top = (row * 98) + 'px';
+                tile.style.left = (col + 96 * col) + 'px';
                 tile.style.backgroundImage = 'URL("background1.jpeg")';
 
                 /*______________S†¥le______________*/
@@ -41,15 +40,15 @@
                 tile.style.border = '4px solid black';
 
                 /* ____________Add Number___________ */
-                if (i*j == 9) {
+                if (row*col == 9) {
                     tile.style.backgroundImage = 'none';
                     tile.style.border = 'none';
                 }
 
                 if (number <= 15) {
                     tile.classList.add('number');
-                    tile.style.backgroundPositionX = (-1*j*100) + 'px';
-                    tile.style.backgroundPositionY = (-1*i*100) + 'px';
+                    tile.style.backgroundPositionX = (-1*col*100) + 'px';
+                    tile.style.backgroundPositionY = (-1*row*100) + 'px';
                     tile.innerHTML = (number++).toString();
                 } else {
                     tile.innerHTML = '';
@@ -74,17 +73,19 @@
 
     function moveabe(tile) {
         /* ________IF moveable shift to empty_______ */
-        
-        if(tile.className != 'blank'){
-            
+        if(tile.className != 'blank'){	
+            var placeHolder = {style: tile.style.cssText, id: tile.id}; //holds current clicked tile id. gives it to Blank.
 
+            // moves clicked tile to blank stop by switching id #
+            //current bug. when switching id's 'endefined' shows up
+            console.log(placeHolder.id);
+			tile.id = blankTile.id;
+			blankTile.id = placeHolder.id;
         }
 
     }
 
-    
-
-    function emptyTile(){
+    function blankTile(){
         return document.querySelector('.blank');
     }
 
