@@ -1,40 +1,35 @@
 <?php
 /* 
-
-Author @Kevin Feyjoo
-
-Helped by @Eduardo Gonzales
-
-
-
-
-Write a trivia.php code to read the .txt files 
-(from particular category specified by the fetch()) 
-and output as JSON.  You can use $_GET[“mode”], scandir 
-and json_encode(). 
- 
-$triviafiles = "../trivia/";
-$categoryName = strtolower($_GET["name"]);
-$trivia = glob($triviafiles . $categoryName . "/*.txt");
-
-To print the question and answer, you can:
-
-print(json_encode(array("question" => $question, "answer" => $answer)));
-
-
+*
+*   Author @Kevin Feyjoo
+*
+*Write a trivia.php code to read the .txt files 
+*(from particular category specified by the fetch()) 
+*and output as JSON.  You can use $_GET[“mode”], scandir 
+*and json_encode(). 
+* 
+*$triviafiles = "../trivia/";
+*$categoryName = strtolower($_GET["name"]);
+*$trivia = glob($triviafiles . $categoryName . "/*.txt");
+*
+*To print the question and answer, you can:
+*
+*print(json_encode(array("question" => $question, "answer" => $answer)));
+*
+*
 */
 
 
 // Define variables
-// directory name and scan
-$directory = "/trivia/trivia/";
-$categories = scandir($directory);
-$count = sizeof($categories);
-$trivia[$count];
 
-for($i =0; $i < $count; $i++) {
-  $directory = $directory.$categories[$i]."/*.txt";
-  $q_count = glob($directory); 
+$triviafiles = "/trivia/trivia/"; // directory name
+$categories = scandir($triviafiles); //scan directory
+$count = sizeof($categories); //length of categories
+$trivia[$count]; //empty array the size of categories 
+
+for($i = 0; $i < $count; $i++) {
+  $triviafiles = $triviafiles.$categories[$i]."/*.txt";
+  $q_count = glob($triviafiles); 
   $q_count_size = sizeof($q_count);
   //The glob() function searches for all the pathnames matching 
 //pattern /trivia/trivia 
@@ -62,7 +57,7 @@ for($i =0; $i < $count; $i++) {
   $qestions = array();
   $answers = array();
 
-  $directory = "trivia/trivia/";
+  $triviafiles = "trivia/trivia/";
 }
 
 $JSON = json_encode($trivia, JSON_PRETTY_PRINT);

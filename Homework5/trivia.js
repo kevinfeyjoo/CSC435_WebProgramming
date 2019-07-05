@@ -1,32 +1,36 @@
 /*
-
-Author @Kevin Feyjoo
-
-
-
-Write a trivia.js code to call the PHP code and render the content back to the browser.  You might find the following code snippets useful
-To fetch the a question from a particular category:
-
-  function fetchCategories() {     
-    let hxr = new XMLHttpRequest()     
-    hrx.onload = displayCategories;     
-    hrx.open("GET", "trivia.php?mode=categories");     
-    hrx.send();   
-} 
-
-   function showTrivia() {     
-    let url = "trivia.php?mode=category";    
-    if (currentCategory) {       
-      url += "&name=" + currentCategory;     
-    }     
-      fetch(url)     
-    .then(checkStatus)     
-    .then(JSON.parse)     
-    .then(displayQuestion);
-  }
-
+*
+*
+*   Author @Kevin Feyjoo
+*
+*
+*
+*
+*
+*Write a trivia.js code to call the PHP code and render the content back to the browser.  You might find the following code snippets useful
+*To fetch the a question from a particular category:
+*
+*function fetchCategories() {     
+*    let hxr = new XMLHttpRequest()     
+*    hrx.onload = displayCategories;     
+*    hrx.open("GET", "trivia.php?mode=categories");     
+*    hrx.send();   
+*} 
+*
+*
+*
+*   function showTrivia() {     
+*    let url = "trivia.php?mode=category";    
+*    if (currentCategory) {       
+*      url += "&name=" + currentCategory;     
+*    }     
+*      fetch(url)     
+*    .then(checkStatus)     
+*    .then(JSON.parse)     
+*    .then(displayQuestion);
+*  }
+*
 */
-"use strict";
 (function() {
   let currentCategory;
 
@@ -38,30 +42,45 @@ To fetch the a question from a particular category:
   };
 
   function fetchCategories(){
+    //this removes the hidden features once clicked
+    let rmvhid = document.getElementById('category-view');
+    let rmvhid1 = document.getElementById('categories-heading');
+    rmvhid1.className = '';
+    rmvhid.className = '';
+
+
+
     //fetch variables
-    let new_request = new XMLHttpRequest(),
+    let xhttp = new XMLHttpRequest(),
     method = "GET",
     url = "trivia.php";//JSON 
 
-    var trivia;
-    new_request.open(method, url, true); 
-    new_request.send()
-  }
-  
-  function questionOrAnswer() {
+    let trivia;
+    
+   
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        //document.getElementById("demo").innerHTML = this.responseText;
+        trivia = JSON.parse(this.responseText);
+        var list = document.getElementById("categories");
+        for (var i = 0; i < trivia.length; i++) {
+          var category = document.createElement("LI");
+          var res = document.createTextNode(trivia[i].CategoryName);
+          category.appendChild(res);
+          list.appendChild(category);
+          category.classList.add("category");
 
-  }
-
-
-
-
-  function checkStatus(response) {
-    if (response.status >= 200 && response.status < 300 || 
-        response.status == 0) {
-      return response.text();
-    } else { 
-      return Promise.reject(
-        new Error(response.status + ": " + response.statusText));
+      }
     }
   }
+    xhttp.open(method, url, true); 
+    xhttp.send()
+}
+
+  function questionOrAnswer() {
+
+
+
+  }
+
 })();
