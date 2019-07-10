@@ -3,18 +3,18 @@
 *
 *   Author @Kevin Feyjoo
 *
-*Write a trivia.php code to read the .txt files 
-*(from particular category specified by the fetch()) 
-*and output as JSON.  You can use $_GET[“mode”], scandir 
-*and json_encode(). 
+*   Write a trivia.php code to read the .txt files 
+*   (from particular category specified by the fetch()) 
+*   and output as JSON.  You can use $_GET[“mode”], scandir 
+*   and json_encode(). 
 * 
-*$triviafiles = "../trivia/";
-*$categoryName = strtolower($_GET["name"]);
-*$trivia = glob($triviafiles . $categoryName . "/*.txt");
+*   $triviafiles = "../trivia/";
+*   $categoryName = strtolower($_GET["name"]);
+*   $trivia = glob($triviafiles . $categoryName . "/*.txt");
 *
-*To print the question and answer, you can:
+*   To print the question and answer, you can:
 *
-*print(json_encode(array("question" => $question, "answer" => $answer)));
+*   print(json_encode(array("question" => $question, "answer" => $answer)));
 *
 *
 */
@@ -22,9 +22,11 @@
 
 // Define variables
 
-$triviafiles = "/trivia/trivia/"; // directory name
-$categories = scandir($triviafiles); //scan directory
+$triviafiles = "/Applications/AMPPS/www/CSC435_WebProgramming/Homework5/trivia/trivia/"; // directory name
+$categories = scandir($triviafiles, 1); //scan directory
 $count = sizeof($categories); //length of categories
+foreach (scandir($triviafiles) as $categories)
+echo $categories."<br>";
 $trivia[$count]; //empty array the size of categories 
 
 for($i = 0; $i < $count; $i++) {
@@ -57,12 +59,12 @@ for($i = 0; $i < $count; $i++) {
   $qestions = array();
   $answers = array();
 
-  $triviafiles = "trivia/trivia/";
+  $triviafiles = "/Applications/AMPPS/www/CSC435_WebProgramming/Homework5/trivia/trivia/";
 }
 
 $JSON = json_encode($trivia, JSON_PRETTY_PRINT);
 echo $JSON;
-$files = fopen("trivia.json", "w") or die("nope");
+$files = fopen("trivia.json", "w") or die("Error!");
 
-fwrite($files, $JSON);
+fwrite($files, $JSON); 
 ?>
