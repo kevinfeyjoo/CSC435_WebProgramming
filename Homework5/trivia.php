@@ -22,49 +22,34 @@
 
 // Define variables
 
-$triviafiles = "/Applications/AMPPS/www/CSC435_WebProgramming/Homework5/trivia/trivia/"; // directory name
-$categories = scandir($triviafiles, 1); //scan directory
-$count = sizeof($categories); //length of categories
-foreach (scandir($triviafiles) as $categories)
-echo $categories."<br>";
-$trivia[$count]; //empty array the size of categories 
+$triviafiles = "./trivia/trivia/"; // directory name
 
-for($i = 0; $i < $count; $i++) {
-  $triviafiles = $triviafiles.$categories[$i]."/*.txt";
-  $q_count = glob($triviafiles); 
-  $q_count_size = sizeof($q_count);
-  //The glob() function searches for all the pathnames matching 
-//pattern /trivia/trivia 
+$json_file = fopen("trivia.json", "w") or die("Error!");
 
-  $qestions[$q_count_size];
-  $answers[$q_count_size];
-  $trivia[$i]["CategoryName"] = $category[$i];
 
-  for($j = 0; $j < $q_count_size; $j++) {
+// Almost there! get these to read in the right lines
+$question; //
+$answer;  //
 
-    $info = file($q_count[$j]);
 
-    $qestions[$j] = array(
-      "Question" => $info[0],
-    );
 
-    $answers[$j] = array(
-      "Answer" => $info[1],
-    );
-  }
+$question_s = array();
+$answer_s = array();
 
-  $trivia[$i]["Question"] = $qestions;
-  $trivia[$i]["Answer"] = $answers;
 
-  $qestions = array();
-  $answers = array();
 
-  $triviafiles = "/Applications/AMPPS/www/CSC435_WebProgramming/Homework5/trivia/trivia/";
+foreach (scandir($triviafiles, 1) as $category){
+
+  $CategoryNAME_test -> CategoryName = $category;
+  $CategoryNAME_test -> Question = $question;
+  $CategoryNAME_test -> Answer = $answer;
+
+  //$myJSON = json_encode(array($CategoryNAME_test, JSON_PRETTY_PRINT));
+  $myJSON = json_encode($CategoryNAME_test, JSON_PRETTY_PRINT);
+
+  fwrite($json_file, $myJSON); 
 }
 
-$JSON = json_encode($trivia, JSON_PRETTY_PRINT);
-echo $JSON;
-$files = fopen("trivia.json", "w") or die("Error!");
 
-fwrite($files, $JSON); 
+fclose($json_file)
 ?>

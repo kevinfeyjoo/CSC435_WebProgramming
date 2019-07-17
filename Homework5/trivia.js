@@ -55,8 +55,8 @@
    
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        //document.getElementById("demo").innerHTML = this.responseText;
-        let trivia = JSON.parse(this.responseText);
+        let trivia = (this.responseText).toString;
+        trivia = JSON.parse(trivia);
         let list = document.getElementById("categories");
         for (let i = 0; i < trivia.length; i++) {
           let category = document.createElement("LI"); //create a clickables li
