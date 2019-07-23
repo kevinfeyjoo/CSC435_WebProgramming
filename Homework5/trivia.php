@@ -22,9 +22,12 @@
 
 // Define variables
 
-$triviafiles = "./trivia/trivia/"; // directory name
+$triviafiles = "./trivia/trivia/"; //root directory of trivia.
+				// note ** use javascript DOM elem to create these variables
+
 
 $json_file = fopen("trivia.json", "w") or die("Error!");
+
 
 
 // Almost there! get these to read in the right lines
@@ -49,7 +52,7 @@ foreach (scandir($triviafiles, 1) as $category){
 
   fwrite($json_file, $myJSON); 
 }
-
+//add func() for get['NAME'];
 
 fclose($json_file)
 ?>
