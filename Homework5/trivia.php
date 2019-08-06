@@ -21,38 +21,104 @@
 
 
 // Define variables
-
+header("Content-Type: application/json"); 
 $triviafiles = "./trivia/trivia/"; //root directory of trivia.
-				// note ** use javascript DOM elem to create these variables
+// note ** use javascript DOM elem to create these variables
+$json_file = fopen("trivia.json", "w+") or die("Error!");
+$trivia = glob($triviafiles . $categoryName . "/*.txt");
 
-
-$json_file = fopen("trivia.json", "w") or die("Error!");
 
 
 
 // Almost there! get these to read in the right lines
-$question; //
+$question; //scandir $triviafile + "CategoryName";
 $answer;  //
+$categoryName = strtolower($_GET["name"]); //gets category name from html file
+
+
+/* 
 
 
 
-$question_s = array();
-$answer_s = array();
-
-
-
+//wrap json in []
+fwrite($json_file, "[");
 foreach (scandir($triviafiles, 1) as $category){
 
-  $CategoryNAME_test -> CategoryName = $category;
-  $CategoryNAME_test -> Question = $question;
-  $CategoryNAME_test -> Answer = $answer;
-
-  //$myJSON = json_encode(array($CategoryNAME_test, JSON_PRETTY_PRINT));
-  $myJSON = json_encode($CategoryNAME_test, JSON_PRETTY_PRINT);
-
-  fwrite($json_file, $myJSON); 
+  $newJson = array(//lets try to make this json friendly
+    
+    'Category' =>  $category,
+    'Question' =>  $question,
+    'Answer' =>  $answer
+    
+  ); 
+  $myJSON = json_encode($newJson, JSON_PRETTY_PRINT);//why wont json work
+  
+  fwrite($json_file, $myJSON); //write in correct json format
+  fwrite($json_file, ", ");
 }
-//add func() for get['NAME'];
+fwrite($json_file, "]");
+//wrap json in []
 
-fclose($json_file)
+
+ */
+
+
+
+function categories()//
+{
+  $cat_file = fopen("categories.json", "w+") or die("Error!");
+  fwrite($cat_file, "[");
+  $triviafiles = "./trivia/trivia/";
+  foreach (scandir($triviafiles, 1) as $category){
+    $categories = [
+      "Category" => $category
+    ];
+    $json = json_encode($categories, JSON_PRETTY_PRINT)."\n";
+    fwrite($cat_file, $json);
+    fwrite($cat_file, ", ");
+    echo $json . "\n";
+    //fwrite($cat_file, "\n");
+  };
+  
+  //print_r($categories = file("categories.json"));//
+  fwrite($cat_file, "]");
+  fclose($cat_file);
+}
+
+
+function fixJson(){
+  $lines = file('categories.json'); 
+  $last = sizeof($lines) - 1 ; 
+  unset($lines[$last]);
+
+  $fp = fopen('categories.json', 'w'); 
+  fwrite($fp, implode('', $lines)); 
+  fwrite($fp, ']');
+  fclose($fp);
+}
+
+
+
+
+
+categories();
+fixJson();
+
+/* 
+
+
+
+
+/////~//currently being printed to json file
+$json_filee = "trivia.json";
+$filesize = filesize($json_filee);
+$fileo = fopen($json_filee, "r");
+$filetext = fread($fileo, $filesize );
+echo ( "\n$filetext" );
+/////
+
+
+
+
+fclose($json_file);//end */
 ?>

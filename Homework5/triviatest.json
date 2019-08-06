@@ -1,0 +1,46 @@
+{
+	"astronomy" : {
+		"question": "The peanut is a type of nut.",
+		"answer": false
+	},
+
+	"biology" : {
+		"question": "To tell someone to \"break a leg\" is a way to wish them good luck.",
+		"answer": true
+	},
+
+	"chemistry" : {
+		"question": "The control ropes to position sails on a ship are called masts.",
+		"answer": false
+	},
+
+	"computerscience" : {
+		"question": "Agoraphobia is the fear of spiders.",
+		"answer": false
+	},
+
+	"culture" : {
+		"question": "Audiences in ancient Greece would slap their thighs instead of clapping to show their appreciation for a performance.",
+		"answer": false
+	},
+
+	"history" : {
+		"question": "The average flight altitude of a commercial aircraft is 30,000 feet.",
+		"answer": true
+	},
+
+	"internet" : {
+		"question": "John Glenn became the first American to orbit the Earth in 1962.",
+		"answer": true
+	},
+
+	"pokemon" : {
+		"question": "New York City is nicknamed \"Sin City\".",
+		"answer": false
+	},
+
+	"random" : {
+		"question": "Ambidextrous means being able to do something equally well with both hands.",
+		"answer": true
+	}
+}
