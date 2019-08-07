@@ -61,7 +61,8 @@
       for (let i = 0; i < count; i++) {
         console.log(categories[i]);
         $list = document.getElementById("categories")
-        $("<li> " + categories[i] + "</li>").appendTo($list);
+        $("<li class = " + categories[i] + ">"+ categories[i] + "</li>").appendTo($list);
+        //adding id or class not necessary
         $list.onclick = showNext;
       }
       /* $.each(categories, function() { 
@@ -78,6 +79,7 @@
     let card = document.getElementById('card');
     nextbtn.classList = '';
     card.classList = '';
+    console.log(this.responseText);
   }
 
 

@@ -36,34 +36,6 @@ $answer;  //
 $categoryName = strtolower($_GET["name"]); //gets category name from html file
 
 
-/* 
-
-
-
-//wrap json in []
-fwrite($json_file, "[");
-foreach (scandir($triviafiles, 1) as $category){
-
-  $newJson = array(//lets try to make this json friendly
-    
-    'Category' =>  $category,
-    'Question' =>  $question,
-    'Answer' =>  $answer
-    
-  ); 
-  $myJSON = json_encode($newJson, JSON_PRETTY_PRINT);//why wont json work
-  
-  fwrite($json_file, $myJSON); //write in correct json format
-  fwrite($json_file, ", ");
-}
-fwrite($json_file, "]");
-//wrap json in []
-
-
- */
-
-
-
 function categories()//
 {
   $cat_file = fopen("categories.json", "w+") or die("Error!");
@@ -71,7 +43,11 @@ function categories()//
   $triviafiles = "./trivia/trivia/";
   foreach (scandir($triviafiles, 1) as $category){
     $categories = [
-      "Category" => $category
+      "blajbceu" => [
+        "Category" => $category,
+        "Question" => $question,
+        "Answer" => $answer
+      ]
     ];
     $json = json_encode($categories, JSON_PRETTY_PRINT)."\n";
     fwrite($cat_file, $json);
@@ -86,15 +62,20 @@ function categories()//
 }
 
 
+
+
+
+
+
 function fixJson(){
   $lines = file('categories.json'); 
   $last = sizeof($lines) - 1 ; 
   unset($lines[$last]);
 
-  $fp = fopen('categories.json', 'w'); 
-  fwrite($fp, implode('', $lines)); 
-  fwrite($fp, ']');
-  fclose($fp);
+  $delet = fopen('categories.json', 'w'); 
+  fwrite($delet, implode('', $lines)); //remove last line
+  fwrite($delet, ']');                 //and add ] for 
+  fclose($delet);                      //correct JSON format
 }
 
 
@@ -103,22 +84,4 @@ function fixJson(){
 
 categories();
 fixJson();
-
-/* 
-
-
-
-
-/////~//currently being printed to json file
-$json_filee = "trivia.json";
-$filesize = filesize($json_filee);
-$fileo = fopen($json_filee, "r");
-$filetext = fread($fileo, $filesize );
-echo ( "\n$filetext" );
-/////
-
-
-
-
-fclose($json_file);//end */
 ?>
