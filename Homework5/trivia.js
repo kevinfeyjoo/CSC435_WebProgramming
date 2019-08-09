@@ -51,20 +51,21 @@
 
   function fetchCategories(){
     remove_hide();
-    var cats = [];
-    $.getJSON("triviatest.json", function(categories) {
-      cats.push(categories);
-      console.log(cats);
+    $.getJSON("trivia.json", function(categories) {
+      console.log(categories[0][0]);
       var categories = jQuery.makeArray(Object.keys(categories));
       
       var count = categories.length;
       for (let i = 0; i < count; i++) {
-        console.log(categories[i]);
+        //console.log(categories[i]);
         $list = document.getElementById("categories")
-        $("<li class = " + categories[i] + ">"+ categories[i] + "</li>").appendTo($list);
+        $("<li class = name >" + categories[i] + "</li>").appendTo($list);
         //adding id or class not necessary
-        $list.onclick = showNext;
       }
+      $listt = document.querySelectorAll("li .name");
+      console.log($listt);
+      
+
       /* $.each(categories, function() { 
         console.log(categories);
         
@@ -81,7 +82,6 @@
     card.classList = '';
     console.log(this.responseText);
   }
-
 
 
 

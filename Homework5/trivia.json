@@ -1,0 +1,354 @@
+[
+    {
+        "Category": "random",
+        "Question": null,
+        "Answer": null
+    },
+    {
+        "Category": "pokemon",
+        "Question": [
+            {
+                "Questions": "Q: What Pokemon comes first in the Pokedex?\n"
+            },
+            {
+                "Questions": "Q: Who gave Ash his Pikachu?\n"
+            },
+            {
+                "Questions": "Q: What is the name of all the nurses on Pokemon?\n"
+            },
+            {
+                "Questions": "Q: What Gym Trainer looks like their eyes are shut?\n"
+            },
+            {
+                "Questions": "Q: What is Ash's hometown called?\n"
+            },
+            {
+                "Questions": "Q: What is the name of the egg-thingy Pokemon that Misty carries around?\n"
+            },
+            {
+                "Questions": "Q: What evolution stone can turn an Eevee into a Vaporeon?\n"
+            }
+        ],
+        "Answer": [
+            {
+                "Answers": "A: Bulbasaur\n"
+            },
+            {
+                "Answers": "A: Professor Oak\n"
+            },
+            {
+                "Answers": "A: Nurse Joy\n"
+            },
+            {
+                "Answers": "A: Brock\n"
+            },
+            {
+                "Answers": "A: Pallet Town\n"
+            },
+            {
+                "Answers": "A: Togepi\n"
+            },
+            {
+                "Answers": "A: Water Stone\n"
+            }
+        ]
+    },
+    {
+        "Category": "internet",
+        "Question": [
+            {
+                "Questions": "Q: What does HTML stand for?\n"
+            },
+            {
+                "Questions": "Q: Which transport-layer protocol provides no handshake (and thus, no guarantee of delivery, etc) leading to increased unreliability along with the advantage of faster speeds?\n"
+            },
+            {
+                "Questions": "Q: This WikiLeaks-aided former NSA contractor releases classified military documents over the internet\n"
+            },
+            {
+                "Questions": "Q: In what year did Apple release the iPad?\n"
+            },
+            {
+                "Questions": "Q: In what year did Microsoft release the Bing search engine?\n"
+            },
+            {
+                "Questions": "Q: In what year did Google release the Chrome web browser?\n"
+            },
+            {
+                "Questions": "Q: Which auction site appeared in its first incarnation as a site called AuctionWeb in 1995?\n"
+            },
+            {
+                "Questions": "Q: In what year was Wikipedia launched?\n"
+            },
+            {
+                "Questions": "Q: What does PHP stand for?\n"
+            }
+        ],
+        "Answer": [
+            {
+                "Answers": "A: Hyper-Text Markup Language\n"
+            },
+            {
+                "Answers": "A: UDP (User Datagram Protocol)\n"
+            },
+            {
+                "Answers": "A: Edward Snowden\n"
+            },
+            {
+                "Answers": "A: 2010\n"
+            },
+            {
+                "Answers": "A: 2009\n"
+            },
+            {
+                "Answers": "A: 2008\n"
+            },
+            {
+                "Answers": "A: eBay\n"
+            },
+            {
+                "Answers": "A: 2001\n"
+            },
+            {
+                "Answers": "A: Pre-hypertext processor\n"
+            }
+        ]
+    },
+    {
+        "Category": "history",
+        "Question": [
+            {
+                "Questions": "Q: How many Kings of Rome were there before the Republic?\n"
+            },
+            {
+                "Questions": "Q: Where was sia\u0294\u026c (\"Chief Seattle\") born?\n"
+            },
+            {
+                "Questions": "Q: Where was sia\u0294\u026c (\"Chief Seattle\") buried?\n"
+            },
+            {
+                "Questions": "Q: Who gave the famous speech at the end of the Nez Perce war which concludes \"from where the sun now stands I will fight no more forever.\"?\n"
+            },
+            {
+                "Questions": "Q: What was the first of H.J. Heinz' \"57 varieties\"?\n"
+            },
+            {
+                "Questions": "Q: As of 2017, which U.S. state has the highest percentage of people who walk to work?\n"
+            },
+            {
+                "Questions": "Q: In what year did Norman conquest of England occur?\n"
+            },
+            {
+                "Questions": "Q: In what year was the first Apple computer released?\n"
+            }
+        ],
+        "Answer": [
+            {
+                "Answers": "A: Seven (Romulus, Numa, Tullus, Ancus Marcius, Lucus Tarquinius (first Etruscan king), Servius Tullius, Lucius Tarquinius Superbus)\n"
+            },
+            {
+                "Answers": "A: Blake Island\n"
+            },
+            {
+                "Answers": "A: Suquamish tribal cemetary on Bainbridge Island\n"
+            },
+            {
+                "Answers": "A: Hinmat\u00f3owyalahtq'it of the Nez Perce (\"Chief Joseph\")\n"
+            },
+            {
+                "Answers": "A: Horseradish (1869)\n"
+            },
+            {
+                "Answers": "A: Alaska\n"
+            },
+            {
+                "Answers": "A: 1066 A.D.\n"
+            },
+            {
+                "Answers": "A: 1976\n"
+            }
+        ]
+    },
+    {
+        "Category": "culture",
+        "Question": [
+            {
+                "Questions": "Q: What milk product did the U.S. Agriculture Department propose as a substitute for meat in school lunches, in 1996?\n"
+            },
+            {
+                "Questions": "Q: How many flowers are in the design stamped on each side of a classic Oreo cookie?\n"
+            },
+            {
+                "Questions": "Q: Black-eyed peas are not peas. What are they?\n"
+            },
+            {
+                "Questions": "Q: What was the name of Cheerios when it was first marketed 50 years ago?\n"
+            },
+            {
+                "Questions": "Q: What nation produces two thirds of the world's vanilla?\n"
+            }
+        ],
+        "Answer": [
+            {
+                "Answers": "A: Yogurt\n"
+            },
+            {
+                "Answers": "A: Twelve; each has four petals\n"
+            },
+            {
+                "Answers": "A: Beans\n"
+            },
+            {
+                "Answers": "A: Cheerioats\n"
+            },
+            {
+                "Answers": "A: Madagascar\n"
+            }
+        ]
+    },
+    {
+        "Category": "computerscience",
+        "Question": [
+            {
+                "Questions": "Q: How many nodes are in a complete binary tree of height N?\n"
+            },
+            {
+                "Questions": "Q: What year was Facebook founded?\n"
+            },
+            {
+                "Questions": "Q: How do you declare a variable in JavaScript?\n"
+            },
+            {
+                "Questions": "Q: What does DOM stand for?\n"
+            },
+            {
+                "Questions": "Q: What does PHP stand for?\n"
+            },
+            {
+                "Questions": "Q: What does AJAX stand for?\n"
+            },
+            {
+                "Questions": "Q: In the CSS color property, what does \"RGB\" stand for?\n"
+            },
+            {
+                "Questions": "Q: What does HTML stand for?\n"
+            },
+            {
+                "Questions": "Q: What does CSS stand for?\n"
+            },
+            {
+                "Questions": "Q: In what year was the first Apple computer released?\n"
+            }
+        ],
+        "Answer": [
+            {
+                "Answers": "A: (2^N)-1\n"
+            },
+            {
+                "Answers": "A: 2004\n"
+            },
+            {
+                "Answers": "A: let, var (deprecated)\n"
+            },
+            {
+                "Answers": "A: Document Object Model\n"
+            },
+            {
+                "Answers": "A: Personal Home Page\n"
+            },
+            {
+                "Answers": "A: Asynchronous Javacript and XML\n"
+            },
+            {
+                "Answers": "A: Red Green Blue\n"
+            },
+            {
+                "Answers": "A: Hypertext Markup Language\n"
+            },
+            {
+                "Answers": "A: Cascading style sheets\n"
+            },
+            {
+                "Answers": "A: 1976\n"
+            }
+        ]
+    },
+    {
+        "Category": "chemistry",
+        "Question": [
+            {
+                "Questions": "Q: Which element is represented as the letter \"K\" on the periodic table?\n"
+            }
+        ],
+        "Answer": [
+            {
+                "Answers": "A: Krypton\n"
+            }
+        ]
+    },
+    {
+        "Category": "biology",
+        "Question": [
+            {
+                "Questions": "Q: The youngest branch of the plant family, the flowering plants, is called what?\n"
+            },
+            {
+                "Questions": "Q: The domestic chicken (Gallus gallus domesticus) is thought to have descended from which wild Indonesian bird?\n"
+            },
+            {
+                "Questions": "Q: In the description of biological cells, \"eukaryotes\" are contrasted with these, which exist without a nucleus.\n"
+            },
+            {
+                "Questions": "Q: What is considered the \u201cpowerhouse\u201d of the cell?\n"
+            }
+        ],
+        "Answer": [
+            {
+                "Answers": "A: Angiosperms (encased seeds)\n"
+            },
+            {
+                "Answers": "A: The Red Junglefowl\n"
+            },
+            {
+                "Answers": "A: Prokaryotes\n"
+            },
+            {
+                "Answers": "A: Mitochondria\n"
+            }
+        ]
+    },
+    {
+        "Category": "astronomy",
+        "Question": [
+            {
+                "Questions": "Q: What is the name of the telescope which has currently discovered over 4,000 exoplanets and exoplanet candidates in its namesake \"Field of View\"?\n"
+            },
+            {
+                "Questions": "Q: What is the largest planet in our solar system?\n"
+            }
+        ],
+        "Answer": [
+            {
+                "Answers": "A: Kepler\n"
+            },
+            {
+                "Answers": "A: Jupiter\n"
+            }
+        ]
+    },
+    {
+        "Category": ".DS_Store",
+        "Question": [],
+        "Answer": []
+    },
+    {
+        "Category": "..",
+        "Question": [],
+        "Answer": []
+    },
+    {
+        "Category": ".",
+        "Question": [],
+        "Answer": []
+    }
+]

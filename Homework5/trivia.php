@@ -20,12 +20,73 @@
 */
 
 
-// Define variables
 header("Content-Type: application/json"); 
-$triviafiles = "./trivia/trivia/"; //root directory of trivia.
-// note ** use javascript DOM elem to create these variables
-$json_file = fopen("trivia.json", "w+") or die("Error!");
-$trivia = glob($triviafiles . $categoryName . "/*.txt");
+$categories = scandir("./trivia/trivia/" , 1); //initial scan for categ names
+$trivia_asarray[sizeof($categories)];         //array to place categs
+
+
+
+///place each category in array
+for($i = 0; $i < sizeof($categories; $i++) { 
+  //search similar files starting with $triviafiles, use global version
+  $triviafiles = $triviafiles . $categories[$i] . "/*.txt"; 
+  $triviafiles_glob = glob($triviafiles);
+
+  $Questions[sizeof($triviafiles_glob)];
+  $Answers[sizeof($triviafiles_glob)];
+
+  //push categs into array
+  $trivia_asarray[$i]["Category"] = $categories[$i];
+
+  //place questions and answers in corresponding index
+  for($j = 0; $j < sizeof($triviafiles_glob); $j++) {
+
+    $info = file($triviafiles_glob[$j]);
+
+    $Questions[$j] = array(
+      "Questions" => $info[0]
+    );
+
+    $Answers[$j] = array(
+      "Answers" => $info[1]
+    );
+  }
+
+  $trivia_asarray[$i]["Question"] = $Questions;
+  $trivia_asarray[$i]["Answer"] = $Answers;
+
+  $Questions = array();
+  $Answers = array();
+
+  $triviafiles = "./trivia/trivia/";
+}
+
+$JSON = json_encode($trivia_asarray, JSON_PRETTY_PRINT);
+echo $JSON;
+$myfile = fopen("trivia.json", "w+") or die("nope");
+
+fwrite($myfile, $JSON);
+fclose($myfile);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+
+
 
 
 
@@ -43,8 +104,7 @@ function categories()//
   $triviafiles = "./trivia/trivia/";
   foreach (scandir($triviafiles, 1) as $category){
     $categories = [
-      "blajbceu" => [
-        "Category" => $category,
+      "$categories" => [
         "Question" => $question,
         "Answer" => $answer
       ]
@@ -60,6 +120,15 @@ function categories()//
   fwrite($cat_file, "]");
   fclose($cat_file);
 }
+
+
+for ($i=0; $i < $count; $i++) { 
+  # code...
+}
+
+
+
+
 
 
 
@@ -83,5 +152,5 @@ function fixJson(){
 
 
 categories();
-fixJson();
+fixJson(); */
 ?>
