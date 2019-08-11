@@ -25,21 +25,25 @@ function main(){
   
     //place questions and answers in corresponding index
     for($j = 0; $j < sizeof($triviafiles_glob); $j++) {
-  
       $trivia = file($triviafiles_glob[$j]);
-  
+
+      if ($trivia[0] || $trivia[1] === NULL) {
+        $trivia[0] = "";
+        $trivia[1] = "";
+      }
       $Questions[$j] = array(
         "Questions" => $trivia[0]
       );
-  
       $Answers[$j] = array(
         "Answers" => $trivia[1]
       );
     }
   
-    $trivia_asarray[$i]["Question"] = $Questions;
-    $trivia_asarray[$i]["Answer"] = $Answers;
-  
+    //Answer[0] belongs to Question[0] and so on....
+    $trivia_asarray[$i]["Question"] = $Questions; // You now made an array
+    $trivia_asarray[$i]["Answer"] = $Answers; //  for all questions
+                                            // and corresponding answers
+                                            
     $Questions = array();
     $Answers = array();
   
