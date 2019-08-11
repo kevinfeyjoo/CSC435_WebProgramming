@@ -76,12 +76,11 @@
 
   function showAnswer(e, f){
     var [a, b] = f.split('-');
-
-
     $.getJSON("trivia.json", function(categories) {
       for (let i = 0; i < categories.length; i++) {
         if (categories[i].Category === e) {
           console.log(categories[i].Category + ", \n" + JSON.stringify(categories[i].Questions[a]) + ", \n" + JSON.stringify(categories[i].Answers[b]));
+          //***Theres a bug not choosing clicked answer****//
         }
       }
   });
