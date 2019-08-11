@@ -6,7 +6,8 @@
 *
 */
 (function() {
-  let currentCategory;
+  let currentQuestion;
+  let currentAnswer;
 
   window.onload = function() {
     document.getElementById("view-all").onclick = fetchCategories;
@@ -32,10 +33,9 @@
         $("ul[id*=categories] li").click(function () {
             //console.log($(this).text());
             questionOrAnswer($(this).text()); 
-            // request for questions from category[i or e]
-            //  
+            // request for questions from category[i or e]  
         });
-    });
+      });
   });
 }
 
@@ -45,17 +45,26 @@
 
     $.getJSON("trivia.json", function(categories) {
       $card = document.getElementById('card');
+      $("<ul id = questions>").appendTo($card);
+      $cardlist = document.getElementById("questions");
       for (let i = 0; i < categories.length; i++) {
         if (categories[i].Category === e) {
-          for (let j = 0; j < (categories[i].Question).length; j++) {
-            $("<ul>").appendTo($card);
-            $("<li>" + JSON.stringify(categories[i].Question[j]) + "</li>").appendTo($card);
-            $("</ul>").appendTo($card);
-          }  
-        } else {
+          for (let j = 0; j < (categories[i].Questions).length; j++) {
+            $regex = '/[{}]/g, ""';//doesn't work in jQuery
+            $x = JSON.stringify(categories[i].Questions[j]).replace($regex);
+            $("<li id = " + i + "-"+ j + ">" + $x + "</li>").appendTo($cardlist);
+            $("<br> </br>").appendTo($cardlist);
+            //console.log(categories[i].Answers[j]);
+          }
         }
       }
-    
+      $("</ul>").appendTo($card);
+      $(document).ready(function () {
+        $("ul[id*=questions] li").click(function (event) {
+          //console.log($(this).text());
+          showAnswer(e, event.target.id); //add indices 
+        });
+      }); 
     });
 
     let x = 0;
@@ -63,6 +72,19 @@
       showNext();
       x++;
     }
+  }
+
+  function showAnswer(e, f){
+    var [a, b] = f.split('-');
+
+
+    $.getJSON("trivia.json", function(categories) {
+      for (let i = 0; i < categories.length; i++) {
+        if (categories[i].Category === e) {
+          console.log(categories[i].Category + ", \n" + JSON.stringify(categories[i].Questions[a]) + ", \n" + JSON.stringify(categories[i].Answers[b]));
+        }
+      }
+  });
   }
 
   function showNext() {
@@ -79,6 +101,5 @@
     let rmvhid1 = document.getElementById('categories-heading');
     rmvhid1.className = '';
     rmvhid.className = '';
-
   }
 })();

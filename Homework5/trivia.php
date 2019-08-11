@@ -2,8 +2,8 @@
 /* 
 *
 *   Author @Kevin Feyjoo
-*
-*
+*   
+*   
 */
 header("Content-Type: application/json"); 
 
@@ -26,11 +26,6 @@ function main(){
     //place questions and answers in corresponding index
     for($j = 0; $j < sizeof($triviafiles_glob); $j++) {
       $trivia = file($triviafiles_glob[$j]);
-
-      if ($trivia[0] || $trivia[1] === NULL) {
-        $trivia[0] = "";
-        $trivia[1] = "";
-      }
       $Questions[$j] = array(
         "Questions" => $trivia[0]
       );
@@ -40,8 +35,8 @@ function main(){
     }
   
     //Answer[0] belongs to Question[0] and so on....
-    $trivia_asarray[$i]["Question"] = $Questions; // You now made an array
-    $trivia_asarray[$i]["Answer"] = $Answers; //  for all questions
+    $trivia_asarray[$i]["Questions"] = $Questions; // You now made an array
+    $trivia_asarray[$i]["Answers"] = $Answers; //  for all questions
                                             // and corresponding answers
                                             
     $Questions = array();
@@ -51,7 +46,7 @@ function main(){
   }
   
   $JSON = json_encode($trivia_asarray, JSON_PRETTY_PRINT);
-  return $JSON;
+  echo $JSON;
   $myfile = fopen("trivia.json", "w+") or die("nope");
   
   fwrite($myfile, $JSON);
@@ -68,7 +63,7 @@ function remove($json, $regex){//in this function, remove categs with '.'
 /* $categoryName = strtolower($_GET["e"]);
 
 function question($categoryName){//requires the clicked LI 
-  return "$categoryName is the shit";
+  return "$categoryName is a fun category";
 } */
 
 //question($categoryName);

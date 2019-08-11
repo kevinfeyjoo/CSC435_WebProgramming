@@ -1,12 +1,12 @@
 [
     {
         "Category": "random",
-        "Question": null,
-        "Answer": null
+        "Questions": null,
+        "Answers": null
     },
     {
         "Category": "pokemon",
-        "Question": [
+        "Questions": [
             {
                 "Questions": "Q: What Pokemon comes first in the Pokedex?\n"
             },
@@ -29,7 +29,7 @@
                 "Questions": "Q: What evolution stone can turn an Eevee into a Vaporeon?\n"
             }
         ],
-        "Answer": [
+        "Answers": [
             {
                 "Answers": "A: Bulbasaur\n"
             },
@@ -55,7 +55,7 @@
     },
     {
         "Category": "internet",
-        "Question": [
+        "Questions": [
             {
                 "Questions": "Q: What does HTML stand for?\n"
             },
@@ -84,7 +84,7 @@
                 "Questions": "Q: What does PHP stand for?\n"
             }
         ],
-        "Answer": [
+        "Answers": [
             {
                 "Answers": "A: Hyper-Text Markup Language\n"
             },
@@ -116,7 +116,7 @@
     },
     {
         "Category": "history",
-        "Question": [
+        "Questions": [
             {
                 "Questions": "Q: How many Kings of Rome were there before the Republic?\n"
             },
@@ -142,7 +142,7 @@
                 "Questions": "Q: In what year was the first Apple computer released?\n"
             }
         ],
-        "Answer": [
+        "Answers": [
             {
                 "Answers": "A: Seven (Romulus, Numa, Tullus, Ancus Marcius, Lucus Tarquinius (first Etruscan king), Servius Tullius, Lucius Tarquinius Superbus)\n"
             },
@@ -171,7 +171,7 @@
     },
     {
         "Category": "culture",
-        "Question": [
+        "Questions": [
             {
                 "Questions": "Q: What milk product did the U.S. Agriculture Department propose as a substitute for meat in school lunches, in 1996?\n"
             },
@@ -188,7 +188,7 @@
                 "Questions": "Q: What nation produces two thirds of the world's vanilla?\n"
             }
         ],
-        "Answer": [
+        "Answers": [
             {
                 "Answers": "A: Yogurt\n"
             },
@@ -208,7 +208,7 @@
     },
     {
         "Category": "computerscience",
-        "Question": [
+        "Questions": [
             {
                 "Questions": "Q: How many nodes are in a complete binary tree of height N?\n"
             },
@@ -240,7 +240,7 @@
                 "Questions": "Q: In what year was the first Apple computer released?\n"
             }
         ],
-        "Answer": [
+        "Answers": [
             {
                 "Answers": "A: (2^N)-1\n"
             },
@@ -275,12 +275,12 @@
     },
     {
         "Category": "chemistry",
-        "Question": [
+        "Questions": [
             {
                 "Questions": "Q: Which element is represented as the letter \"K\" on the periodic table?\n"
             }
         ],
-        "Answer": [
+        "Answers": [
             {
                 "Answers": "A: Krypton\n"
             }
@@ -288,7 +288,7 @@
     },
     {
         "Category": "biology",
-        "Question": [
+        "Questions": [
             {
                 "Questions": "Q: The youngest branch of the plant family, the flowering plants, is called what?\n"
             },
@@ -302,7 +302,7 @@
                 "Questions": "Q: What is considered the \u201cpowerhouse\u201d of the cell?\n"
             }
         ],
-        "Answer": [
+        "Answers": [
             {
                 "Answers": "A: Angiosperms (encased seeds)\n"
             },
@@ -319,7 +319,7 @@
     },
     {
         "Category": "astronomy",
-        "Question": [
+        "Questions": [
             {
                 "Questions": "Q: What is the name of the telescope which has currently discovered over 4,000 exoplanets and exoplanet candidates in its namesake \"Field of View\"?\n"
             },
@@ -327,7 +327,7 @@
                 "Questions": "Q: What is the largest planet in our solar system?\n"
             }
         ],
-        "Answer": [
+        "Answers": [
             {
                 "Answers": "A: Kepler\n"
             },
@@ -338,17 +338,17 @@
     },
     {
         "Category": ".ds_store",
-        "Question": [],
-        "Answer": []
+        "Questions": [],
+        "Answers": []
     },
     {
         "Category": "..",
-        "Question": [],
-        "Answer": []
+        "Questions": [],
+        "Answers": []
     },
     {
         "Category": ".",
-        "Question": [],
-        "Answer": []
+        "Questions": [],
+        "Answers": []
     }
 ]
