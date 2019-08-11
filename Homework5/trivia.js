@@ -2,33 +2,7 @@
 *
 *
 *   Author @Kevin Feyjoo
-*
-*
-*
-*
-*
-*   Write a trivia.js code to call the PHP code and render the content back to the browser.  You might find the following code snippets useful
-*   To fetch the a question from a particular category:
-*
-*   function fetchCategories() {     
-*      let hxr = new XMLHttpRequest()     
-*      hrx.onload = displayCategories;     
-*      hrx.open("GET", "trivia.php?mode=categories");     
-*      hrx.send();   
-*   } 
-*
-*
-*
-*   function showTrivia() {     
-*    let url = "trivia.php?mode=category";    
-*    if (currentCategory) {       
-*      url += "&name=" + currentCategory;     
-*    }     
-*      fetch(url)     
-*    .then(checkStatus)     
-*    .then(JSON.parse)     
-*    .then(displayQuestion);
-*  }
+*  
 *
 */
 (function() {
@@ -46,66 +20,65 @@
 ///////
   };
 
-
-  
-
   function fetchCategories(){
     remove_hide();
     $.getJSON("trivia.json", function(categories) {
-      console.log(categories[0][0]);
-      var categories = jQuery.makeArray(Object.keys(categories));
-      
-      var count = categories.length;
-      for (let i = 0; i < count; i++) {
-        //console.log(categories[i]);
+      //console.log(categories[0].Category);
+      for (let i = 0; i < categories.length; i++) {
         $list = document.getElementById("categories")
-        $("<li class = name >" + categories[i] + "</li>").appendTo($list);
-        //adding id or class not necessary
+        $("<li>" + categories[i].Category + "</li>").appendTo($list);
       }
-      $listt = document.querySelectorAll("li .name");
-      console.log($listt);
-      
-
-      /* $.each(categories, function() { 
-        console.log(categories);
-        
-        
-      }); */
+      $(document).ready(function () {
+        $("ul[id*=categories] li").click(function () {
+            //console.log($(this).text());
+            questionOrAnswer($(this).text()); 
+            // request for questions from category[i or e]
+            //  
+        });
     });
+  });
 }
 
-  
+  function questionOrAnswer(e) { 
+    let card = document.getElementById('card');
+    card.innerHTML = "";
+
+    $.getJSON("trivia.json", function(categories) {
+      $card = document.getElementById('card');
+      for (let i = 0; i < categories.length; i++) {
+        if (categories[i].Category === e) {
+          for (let j = 0; j < (categories[i].Question).length; j++) {
+            $("<ul>").appendTo($card);
+            $("<li>" + JSON.stringify(categories[i].Question[j]) + "</li>").appendTo($card);
+            $("</ul>").appendTo($card);
+          }  
+        } else {
+        }
+      }
+    
+    });
+
+    let x = 0;
+    while (x == 0) {
+      showNext();
+      x++;
+    }
+  }
+
   function showNext() {
     let nextbtn = document.getElementById('question-view');
     let card = document.getElementById('card');
     nextbtn.classList = '';
     card.classList = '';
-    console.log(this.responseText);
   }
 
-
-
-  function checkStatus(){
-    
-      
-  
-}
-
-
-  function remove_hide(){//whenever something is shown, this function will remove hidden class
-    let x; //= button pressed 
-        //this removes the hidden features once clicked
+  function remove_hide(){ 
+        //this function will remove hidden class
+        //from categories
     let rmvhid = document.getElementById('category-view');
     let rmvhid1 = document.getElementById('categories-heading');
-    let nextbtn = document.getElementById('question-view');
-    let card = document.getElementById('card');
     rmvhid1.className = '';
     rmvhid.className = '';
 
   }
-
-  function questionOrAnswer() {
-
-  }
-
 })();
