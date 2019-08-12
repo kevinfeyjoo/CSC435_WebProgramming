@@ -75,14 +75,22 @@
   }
 
   function showAnswer(e, f){
+    var card = document.getElementById('card');
+    card.innerHTML = "";
     var [a, b] = f.split('-');
+    //console.log(a+" - "+b);//a doesnt matter here
     $.getJSON("trivia.json", function(categories) {
+      $card = document.getElementById('card');
+      $("<ul id = questions>").appendTo($card);
       for (let i = 0; i < categories.length; i++) {
         if (categories[i].Category === e) {
-          console.log(categories[i].Category + ", \n" + JSON.stringify(categories[i].Questions[a]) + ", \n" + JSON.stringify(categories[i].Answers[b]));
+          a-1;
+          $in = JSON.stringify(categories[i].Answers[b]);
+          //console.log(categories[i].Category + ", \n" + $in + ", \n" + $in);
+          $("<li>" + $in + "</li>").appendTo($card);
           //***Theres a bug not choosing clicked answer****//
         }
-      }
+      }$("</ul>").appendTo($card);
   });
   }
 
