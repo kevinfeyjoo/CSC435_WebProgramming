@@ -1,8 +1,22 @@
 [
     {
         "Category": "random",
-        "Questions": null,
-        "Answers": null
+        "Questions": [
+            {
+                "Questions": "Q: If you were to spell out numbers, how far would you have to go until you would find the letter \"A\"?\n"
+            },
+            {
+                "Questions": "Q: On which day are there more collect calls than any other day of the year (in the US)?\n"
+            }
+        ],
+        "Answers": [
+            {
+                "Answers": "A: One thousand\n"
+            },
+            {
+                "Answers": "A: Father's Day\n"
+            }
+        ]
     },
     {
         "Category": "pokemon",

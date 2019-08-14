@@ -2,16 +2,19 @@
 *
 *
 *   Author @Kevin Feyjoo
-*  
+*   
+*   - note: * rewrite code without ajax for better JSON parsing
+*           * give next button functionality
+*           
+*
+*
+*
 *
 */
 (function() {
-  let currentQuestion;
-  let currentAnswer;
-
   window.onload = function() {
     document.getElementById("view-all").onclick = fetchCategories;
-    document.getElementById("next").onclick = questionOrAnswer;
+    document.getElementById("next").onclick = Next;
 
 ////add jquery w/out touching html
     var jquery = document.createElement('script'); 
@@ -20,6 +23,10 @@
     document.getElementsByTagName('head')[0].appendChild(jquery);
 ///////
   };
+
+  function Next(){
+    alert("Not coded yet");
+  }
 
   function fetchCategories(){
     remove_hide();
@@ -50,9 +57,12 @@
       for (let i = 0; i < categories.length; i++) {
         if (categories[i].Category === e) {
           for (let j = 0; j < (categories[i].Questions).length; j++) {
-            $regex = '/[{}]/g, ""';//doesn't work in jQuery
-            $x = JSON.stringify(categories[i].Questions[j]).replace($regex);
-            $("<li id = " + i + "-"+ j + ">" + $x + "</li>").appendTo($cardlist);
+            $regex = /(?<=\{)\s*[^{]*?(?=[\},])/;
+            $x = JSON.stringify(categories[i].Questions[j]);
+            //$x = $regex.exec($x);
+            //var regex = /^[0-9a-zA-Z@_-]+$/;
+            //$x = $.trim($x).match(regex); 
+            $("<li id = " + i + "-"+ j + ">" + JSON.stringify(categories[i].Questions[j]) + "</li>").appendTo($cardlist);
             $("<br> </br>").appendTo($cardlist);
             //console.log(categories[i].Answers[j]);
           }
@@ -91,7 +101,7 @@
           //***Theres a bug not choosing clicked answer****//
         }
       }$("</ul>").appendTo($card);
-  });
+    });
   }
 
   function showNext() {
