@@ -1,0 +1,28 @@
+.w3-quarter{
+    padding: 5px;
+    margin: 12px;
+    background-color: rgb(1, 1, 24);
+    width: 29%;
+    position: relative;
+    color: white;
+    overflow: scroll;
+    display: block;    
+}
+.w3-quarter p{
+    text-align: center;
+}
+.w3-quarter:hover{
+    background-color: white;
+    color: black;
+}
+.w3-quarter img{
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+html, body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+}
+#name{
+    background-color: black;
+}
