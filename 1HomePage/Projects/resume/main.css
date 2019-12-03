@@ -11,6 +11,10 @@
 .w3-quarter p{
     text-align: center;
 }
+.w3-quarter i{
+    float: right;
+    position: relative;
+}
 .w3-quarter:hover{
     background-color: white;
     color: black;
@@ -24,7 +28,13 @@ html, body, h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto", sans-serif;
 }
 #name{
-    background-color: black;
+    /* background-color: black; */
+    color: white;
+	font-size: 40px;
+	text-shadow: -1px 1px 2px #000,
+				  1px 1px 2px #000,
+				  1px -1px 0 #000,
+				  -1px -1px 0 #000;
 }
 a{
     text-decoration: none;
