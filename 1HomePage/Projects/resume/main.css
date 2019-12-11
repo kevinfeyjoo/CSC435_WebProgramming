@@ -1,12 +1,11 @@
 .w3-quarter{
-    padding-left: 15px;
-    padding-bottom: 15px;
-    padding-right: 15px;
-    margin: auto;
+    padding: 2% 2% 2% 2%;
+    margin: 2% 2% 2% 2%;
     width: 29%;
     position: relative;
     overflow: scroll;
-    display: block;  
+    display: block;
+    text-align: center;
  
 }
 .w3-quarter p{
