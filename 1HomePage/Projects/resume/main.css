@@ -90,7 +90,7 @@ a{
     text-align: left; 
 }
 .project-content img{
-    height: 100px;
-    width: 150px;
-    margin: auto;
+    height: 200px;
+    width: 300px;
+    padding: 6px;
 }
