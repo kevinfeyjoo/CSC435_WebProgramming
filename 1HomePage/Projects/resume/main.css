@@ -6,6 +6,7 @@
     overflow: scroll;
     display: block;
     text-align: center;
+    cursor:zoom-in;
  
 }
 .w3-quarter p{
@@ -78,6 +79,7 @@ a{
     float: right;
     font-size: 28px;
     font-weight: bold;
+    position: relative;
 }
   
 .closeBtn:hover,
