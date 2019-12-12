@@ -23,6 +23,8 @@
     max-width: 100%;
     display: block;
     margin: auto;
+    height: 100px;
+    width: 150px;
 }
 html, body, h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto", sans-serif;
@@ -51,7 +53,6 @@ a{
     left: 50%;
     transform: translate(-50%,-50%);
     margin: 0 auto;
-    background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4);
     box-shadow: 0 0 8px 1px rgba(92,92,92,0.5);
     display: none;
@@ -67,7 +68,8 @@ a{
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 50%;
+    text-align: center;
 }
   
   /* The Close Button */
@@ -85,5 +87,10 @@ a{
     cursor: pointer;
 }
 .project-title{
-    text-align: center;
+    text-align: left; 
+}
+.project-content img{
+    height: 100px;
+    width: 150px;
+    margin: auto;
 }
