@@ -42,7 +42,6 @@ html, body, h1, h2, h3, h4, h5, h6 {
 a{
     text-decoration: none;
 }
-
 .modal {
     overflow: auto; 
     padding-top: 100px; 
@@ -62,8 +61,7 @@ a{
     border: 1px solid #ccc;
     color: #666;
 }
-  
-  /* Modal Content */
+/* Modal Content */
 .content {
     background-color: #fefefe;
     margin: auto;
@@ -72,8 +70,7 @@ a{
     width: 50%;
     text-align: center;
 }
-  
-  /* The Close Button */
+/* The Close Button */
 .closeBtn {
     color: #aaaaaa;
     float: right;
@@ -81,7 +78,6 @@ a{
     font-weight: bold;
     position: relative;
 }
-  
 .closeBtn:hover,
 .closeBtn:focus {
     color: #000;
