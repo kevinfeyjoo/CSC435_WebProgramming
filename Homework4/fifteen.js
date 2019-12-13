@@ -80,9 +80,8 @@
 
     function moveabe(tile) {
         /* ________IF moveable shift to empty_______ */
-        if(tile.className != 'blank'){	
+        if(tile.className != 'blank' || tile.className == 'blank'){	
             var placeHolder = {style: tile.style.cssText, id: tile.id}; //holds current clicked tile id. gives it to Blank.
-
             // moves clicked tile to blank spot by switching id's
             //CURRENT BUG == ROW-COL 3-3 will not display anything but BLANK
 

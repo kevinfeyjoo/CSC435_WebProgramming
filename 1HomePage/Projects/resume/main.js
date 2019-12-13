@@ -6,8 +6,6 @@
     let modals = document.getElementsByClassName('modal');
     let closeBtn = document.getElementsByClassName('closeBtn');
 
-     
-
     for (let i = 0; i < p_len; i++) {
         //click on project to display modal
         projects[i].addEventListener('click', function pop() {
@@ -18,6 +16,7 @@
             })
         });
     }
+
 
 
 })();
