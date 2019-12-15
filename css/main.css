@@ -1,3 +1,9 @@
-body{
-    background-image: url('imgs/download.jpeg');
+.w3-card-4{
+    margin: auto;
+}
+h3{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#header{
+    padding: 100px;
 }
