@@ -33,7 +33,6 @@ html, body, h1, h2, h3, h4, h5, h6 {
 #name{
     /* background-color: black; */
     color: white;
-	font-size: 40px;
 	text-shadow: -1px 1px 2px #000,
 				  1px 1px 2px #000,
 				  1px -1px 0 #000,
@@ -91,4 +90,10 @@ a{
     height: 200px;
     width: 300px;
     padding: 6px;
+}
+@media screen and (max-width: 760px){
+    .w3-quarter{
+        display: flex;
+        width: auto;
+    }
 }

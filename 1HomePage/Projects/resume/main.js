@@ -1,10 +1,20 @@
 (function () {
     'use strict';
-
     let projects = document.querySelectorAll('.w3-quarter');
     let p_len = projects.length;
     let modals = document.getElementsByClassName('modal');
     let closeBtn = document.getElementsByClassName('closeBtn');
+
+
+
+    //add a function to exit modal if click outside the modal area
+    //this implementation needs work... tryh this https://sabe.io/tutorials/how-to-create-modal-popup-box
+    window.addEventListener('click', function click() {
+        for (let i = 0; i < p_len.length; i++) {
+            modals[i].style.display = 'none';            
+        }
+    });
+
 
     //toggle modal 
     for (let i = 0; i < p_len; i++) {
@@ -18,15 +28,5 @@
                 modals[i].style.display = 'none';
             })
         });
-    }
-
-    //add a function to exit modal if click outside the modal area
-    //this implementation needs work... tryh this https://sabe.io/tutorials/how-to-create-modal-popup-box
-    function clickWindow(){     
-        for (let i = 0; i < p_len; i++) {
-            if (modals[i].style.display == 'block') {
-                window.addEventListener('click', modals[i].style.display = 'none');
-            }
-        }
     }
 })();

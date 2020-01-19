@@ -14,12 +14,10 @@
 
     function __init__() {
         let background = document.getElementById('puzzlearea');
-        background.innerHTML = "";
-        
-        console.log(1);
-
         var number = 1;
         let doneOnce = true;
+        background.innerHTML = "";
+
 
         if (doneOnce){
             for (let row = 0; row <= 3; row++) {
@@ -81,21 +79,29 @@
     function moveabe(tile) {
         /* ________IF moveable shift to empty_______ */
         if(tile.className != 'blank' || tile.className == 'blank'){	
-            var placeHolder = {style: tile.style.cssText, id: tile.id}; //holds current clicked tile id. gives it to Blank.
+            var placeHolder = {style: tile.style, id: tile.id}; //holds current clicked tile id. gives it to Blank.
             // moves clicked tile to blank spot by switching id's
             //CURRENT BUG == ROW-COL 3-3 will not display anything but BLANK
 
             //Background positions must be traded as well
-            tile.id = blankTile.id;
-            tile.style = blankTile.style;
-            blankTile.id = placeHolder.id;
-            blankTile.style = placeHolder.style;
+            let tile_ = tile;
+            let blankT = blankTile();
+
+            tile_.style = blankT.style;
+            blankT.style = placeHolder.style;
+            tile_.id = blankT.id;
+            blankT.id = placeHolder.id
+            
+
+            /* console.log(blankT.style);
+            console.log(placeHolder.style); */
         }
 
     }
 
     function blankTile(){
-        return document.querySelector('.blank');
+        window.blankkk = document.querySelector('.blank');
+        return blankkk;
     }
 
     function shuffle() {
