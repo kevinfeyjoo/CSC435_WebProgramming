@@ -4,6 +4,7 @@
 *   last updated June 18, 2019
 *
 */
+
 (function () {
     'use strict';
     window.onload = function () {
@@ -13,6 +14,7 @@
     };
 
     function __init__() {
+        $('.hide').hide();//jQuery debugger
         let background = document.getElementById('puzzlearea');
         var number = 1;
         let doneOnce = true;
@@ -47,7 +49,7 @@
     
     
     
-                    if (number <= 15) {       //ååååååBUGGGGGGGGGGGG
+                    if (doneOnce && number <= 15) {       //ååååååBUGGGGGGGGGGGG
                         tile.classList.add('number');
                         tile.style.backgroundPositionX = (-1*col*100) + 'px';
                         tile.style.backgroundPositionY = (-1*row*100) + 'px';
@@ -71,14 +73,15 @@
                         moveabe(e.target);//returns tile that 'triggered the event'
                     }
                 }
-            }
+            } 
             doneOnce = false;
         }
+        
     }
 
     function moveabe(tile) {
         /* ________IF moveable shift to empty_______ */
-        if(tile.className != 'blank' || tile.className == 'blank'){	
+        if(tile.className != 'blank'){	
             var placeHolder = {style: tile.style, id: tile.id}; //holds current clicked tile id. gives it to Blank.
             // moves clicked tile to blank spot by switching id's
             //CURRENT BUG == ROW-COL 3-3 will not display anything but BLANK
